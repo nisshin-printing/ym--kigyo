@@ -1,4 +1,4 @@
-# 日進印刷株式会社のWordPressテーマ
+# 専門サイト用のWordPress統一デザイン化テーマ
 
 Mozaik WordPress Theme "starter-kit"を使用しています。
 
