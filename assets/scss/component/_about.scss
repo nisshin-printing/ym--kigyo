@@ -1,0 +1,23 @@
+.about_wrap {
+    padding: 60px 0;
+    background-color: $light-gray;
+}
+
+.about_title {
+    text-align: center;
+    padding-bottom: 1.5em;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: .75em;
+        left: .5em;
+        width: 1em;
+        height: 3px;
+        background-color: $black;
+    }
+    @include breakpoint(large) {
+        text-align: left;
+        font-size: 2rem;
+    }
+}

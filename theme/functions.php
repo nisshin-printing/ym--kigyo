@@ -89,7 +89,8 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		// Register navigation menus for theme
 		register_nav_menus( array(
 			'primary' => 'Main Menu',
-			'footer'  => 'Footer Menu'
+			'footer'  => 'Footer Menu',
+			'sidebar' => 'Sidebar Menu'
 		) );
 
 

@@ -8,23 +8,48 @@
 
 
 <?php // common footer content goes here ?>
-<footer class="c-footer-main">
-	<div class="c-footer-main_container">
-		<nav class="c-footer-main_nav row align-middle align-center -flex small-up-1 large-up-3">
-			<div class="column o-button_wrap">
-				<a href="tel:0822371611" class="c-footer-main_nav-item o-button -secondary" title="電話する"><span><?php NID_SVG::icon( 'phone', array( 'class' => 'c-footer-main_nav-icon' ), '日進印刷へ電話する' ); ?>（082）237-1611</span></a>
-			</div>
-			<div class="column o-button_wrap">
-				<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>" class="c-footer-main_nav-item o-button -secondary" title="お問い合わせフォームへ行く"><span style="letter-spacing:5px"><?php NID_SVG::icon( 'envelope', array( 'class' => 'c-footer-main_nav-icon' ), 'メールでお問い合わせ' ); ?>お問い合わせ</span></a>
-			</div>
-			<div class="column o-button_wrap">
-				<a href="https://www.chatwork.com/nisshin-dtdsh" class="c-footer-main_nav-item o-button -secondary" target="_blank" title="ChatWorkで連絡する"><span><?php NID_SVG::icon( 'chatwork', array( 'class' => 'c-footer-main_nav-image' ), 'ChatWorkで社長へダイレクトに連絡する' ); ?></span></a>
-			</div>
-		</nav>
-		<p class="c-footer-main_copy">©日進印刷株式会社</p>
+<footer class="footer--main">
+	<div class="social-link">
+		<a href="" class="social-link--facebook"><?php NID_SVG::icon( 'facebook', array(), 'Facebook' ); ?></a>
+		<a href="" class="social-link--google-plus"><?php NID_SVG::icon( 'google-plus', array(), 'Google+' ); ?></a>
+		<a href="" class="social-link--youtube"><?php NID_SVG::icon( 'youtube', array(), 'Youtube' ); ?></a>
 	</div>
+	<div class="row">
+
+		<div class="column show-for-large">
+			<h3 class="nav--footer_title">カテゴリ</h3>
+			<ul class="nav--footer menu vertical">
+				<li><a href="">カテゴリ01</a></li>
+				<li><a href="">カテゴリ02</a></li>
+				<li><a href="">カテゴリ03</a></li>
+				<li><a href="">カテゴリ04</a></li>
+				<li><a href="">カテゴリ05</a></li>
+			</ul>
+		</div>
+
+		<div class="column show-for-large">
+			<h3 class="nav--footer_title">特設ページ</h3>
+			<ul class="nav--footer menu vertical">
+				<li><a href="">全記事一覧</a></li>
+				<li><a href="">お客様の声</a></li>
+				<li><a href="">解決事例</a></li>
+				<li><a href="">無料ダウンロード</a></li>
+			</ul>
+		</div>
+
+		<div class="column show-for-large">
+			<h3 class="nav--footer_title">事務所概要</h3>
+			<ul class="nav--footer menu vertical">
+				<li><a href="">事務所概要</a></li>
+				<li><a href="">交通事故の料金表</a></li>
+				<li><a href="">弁護士等紹介</a></li>
+				<li><a href="">ご相談の流れ</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<p class="footer--main_copyright">©<?php echo date( 'Y' ); ?> 山下江法律事務所[広島弁護士会所属]</p>
 </footer>
-<?php get_template_part( 'elements/contact' ); ?>
 
 <?php wp_footer(); ?>
 <?php // </body> opens in header.php ?>

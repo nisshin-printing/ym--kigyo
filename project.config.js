@@ -20,13 +20,13 @@
  * }
  */
 module.exports = {
-    name: 'dtdsh',
-    prettyName: 'dtdsh',
-    themeURI: 'https://dtdsh.com/',
-    description: '日進印刷株式会社のホームページテーマです。SEO対策・高速化・ES2015',
+    name: 'satellite',
+    prettyName: 'satellite',
+    themeURI: 'https://hiroshima-jiko.com/',
+    description: '専門サイト統一デザイン案',
     version: '0.1.0',
     author: 'Kazuki Fukuda <info@dtdsh.com>',
     authorURI: 'https://dtdsh.com/',
     license: 'GPLv2 or later',
-    tags: ['SEO', 'Speed', 'サイト高速化', 'ES2015', 'webpack 2', 'Responsive']
+    tags: ['山下江法律事務所', 'Yamashita Ko Law Office', 'satellite', '専門サイト']
 };

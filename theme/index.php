@@ -10,36 +10,19 @@
 ?>
 
 <main id="js-main">
-	<div class="o-container">
-		<div class="row expanded o-content">
-			<div class="column small-12">
-				<div class="row expanded o-grid">
-					<?php
-						if ( is_front_page() ) {
-							get_template_part( 'templates/front' );
-						} else {
-							NID_Crumbs::crumbs();
-							if ( is_page( 'service' ) ) {
-								get_template_part( 'templates/service' );
-							} elseif ( is_page( 'service/balance-design' ) ) {
-								get_template_part( 'templates/item' );
-							} elseif ( is_page( 'price' ) ) {
-								get_template_part( 'templates/price' );
-							} elseif ( is_page( 'about' ) ) {
-								get_template_part( 'templates/about' );
-							} elseif ( is_page( 'recruit' ) ) {
-								get_template_part( 'templates/recruit' );
-							} elseif ( is_page( 'contact' ) ) {
-								get_template_part( 'templates/contact' );
-							} else {
-								get_template_part( 'templates/404' );
-							}
-						}
-					?>
-				</div>
-			</div>
-		</div>
-	</div>
+
+<?php
+	if ( is_front_page() || is_home() ) {
+		get_template_part( 'elements/header-front' );
+		get_template_part( 'templates/front' );
+	} elseif ( is_page() ) {
+		while( have_posts() ) : the_post();
+			get_template_part( 'elements/header-copy' );
+			get_template_part( 'templates/page' );
+		endwhile;
+	}
+?>
+
 </main>
 
 <?php

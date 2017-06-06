@@ -43,25 +43,28 @@
 @import 'util/util';
 // 1. Global
 // ---------
-$global-font-size: 18px;
-$global-width: rem-calc(1200);
+$global-font-size: 16px;
+$global-width: rem-calc(960);
 $global-lineheight: 1.5;
-$foundation-palette: ( primary: #1F1F1F, secondary: #FFF, success: #3adb76, warning: #ffae00, alert: #cc4b37, );
+$foundation-palette: ( primary: red, secondary: gray, success: #3adb76, warning: #ffae00, alert: #cc4b37, );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #1F1F1F;
 $white: #FFF;
-$body-background: $white;
+$body-background: #FAFAFA;
 $body-font-color: $black;
-$body-font-family: 'Hannari',
-'游明朝',
-YuMincho,
-'ヒラギノ明朝 Pro',
-'HiraMinProN-W3',
-'Sawarabi Mincho',
-'モトヤLマルベリ3等幅',
-serif;
+$body-font-family: 游ゴシック,
+YuGothic,
+"ヒラギノ角ゴ Pro W3",
+"Hiragino Kaku Gothic Pro",
+Verdana,
+メイリオ,
+Meiryo,
+Osaka,
+"ＭＳ Ｐゴシック",
+"MS PGothic",
+sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -79,9 +82,9 @@ $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
 // 3. The Grid
 // -----------
-$grid-row-width: 100%;
+$grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: ( small: 0px, medium: 0px, );
+$grid-column-gutter: ( small: 10px, medium: 1rem, );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
 // 4. Base Typography
@@ -495,9 +498,9 @@ $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
 // 37. Top Bar
 // -----------
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: .5rem;
+$topbar-background: $primary-color;
 $topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-title-spacing: 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

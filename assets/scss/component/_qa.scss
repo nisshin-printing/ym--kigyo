@@ -1,0 +1,29 @@
+.qa {
+    dt {
+        margin-bottom: 1em;
+    }
+}
+
+dt.qa--icon::before {
+    content: 'Q.';
+    color: $primary-color;
+}
+
+dd.qa--icon::before {
+    content: 'A.';
+}
+
+.qa--icon {
+    &::before {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-right: .25em;
+        vertical-align: top;
+        line-height: 1em;
+    }
+}
+
+.qa--more {
+    text-align: right;
+    padding-right: 1.5rem;
+}

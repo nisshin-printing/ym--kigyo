@@ -5,7 +5,7 @@
  *
  */
 module.exports = {
-    proxy: "dtdsh.dev",
+    proxy: "satellite.law-yamashita.local",
     logSnippet: true,
     ghostMode: true,
     open: "local"
