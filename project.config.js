@@ -22,8 +22,8 @@
 module.exports = {
     name: 'satellite',
     prettyName: 'satellite',
-    themeURI: 'https://hiroshima-jiko.com/',
-    description: '専門サイト統一デザイン案',
+    themeURI: 'http://satellite.law-yamashita.local/',
+    description: '専門サイト用WordPressテーマ統一デザイン案',
     version: '0.1.0',
     author: 'Kazuki Fukuda <info@dtdsh.com>',
     authorURI: 'https://dtdsh.com/',
