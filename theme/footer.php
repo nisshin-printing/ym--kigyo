@@ -50,6 +50,7 @@
 
 	<p class="footer--main_copyright">©<?php echo date( 'Y' ); ?> 山下江法律事務所[広島弁護士会所属]</p>
 </footer>
+<?php get_template_part( 'elements/sp-nav' ); ?>
 
 <?php wp_footer(); ?>
 <?php // </body> opens in header.php ?>

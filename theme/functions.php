@@ -9,7 +9,7 @@
 /* =========================================
 		Define
    ========================================= */
-define( 'DTDSH_THEME_VERSION', '1.1' );
+define( 'DTDSH_THEME_VERSION', '0.2' );
 
 /* =========================================
 		ACTION HOOKS & FILTERS
@@ -26,16 +26,6 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 add_action( 'wp_head', 'theme_favicon' );
 
 add_action( 'admin_head', 'theme_favicon' );
-
-remove_action( 'wp_head', 'feed_links_extra', 3 );
-
-remove_action( 'wp_head', 'rsd_link' );
-
-remove_action( 'wp_head', 'wlwmanifest_link' );
-
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
-
-remove_action( 'wp_head', 'wp_generator' );
 
 
 // expose php variables to js. just uncomment line
@@ -107,6 +97,15 @@ if ( ! function_exists( 'theme_setup' ) ) {
 
 		// Remove toolbar for all users in front end
 		// show_admin_bar( false );
+		remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+		remove_action( 'wp_head', 'rsd_link' );
+
+		remove_action( 'wp_head', 'wlwmanifest_link' );
+
+		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
+
+		remove_action( 'wp_head', 'wp_generator' );
 
 
 		// Add Custom Image Sizes
@@ -157,15 +156,7 @@ if ( ! function_exists( 'theme_styles' ) ) {
 	function theme_styles() {
 		$theme_dir = get_stylesheet_directory_uri();
 
-		wp_enqueue_style( 'hannari', "//fonts.googleapis.com/earlyaccess/hannari.css", array(), null, 'all' );
-		if ( preg_match( '/Android/i', $_SERVER['HTTP_USER_AGENT'] ) ) {
-			wp_enqueue_style( 'sawarabi', "//fonts.googleapis.com/earlyaccess/sawarabimincho.css", array(), null, 'all' );
-		}
-		if ( is_page('service/balance-design' ) ) {
-			wp_enqueue_style( 'poiret-one', '//fonts.googleapis.com/css?family=Poiret+One&text=BalanceDesign', array(), '', 'all' );
-			wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato&text=1234567890', array(), '', 'all' );
-		}
-		wp_enqueue_style( 'main', "$theme_dir/assets/css/main.css", array( 'hannari' ), DTDSH_THEME_VERSION, 'all' );
+		wp_enqueue_style( 'main', "$theme_dir/assets/css/main.css", array(), DTDSH_THEME_VERSION, 'all' );
 	}
 }
 

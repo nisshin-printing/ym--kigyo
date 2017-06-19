@@ -78,19 +78,20 @@
  * - Components
  */
 
-@import 'component/topbar';
-@import 'component/free-call';
-@import 'component/nav';
-@import 'component/header--copy';
-@import 'component/service--item';
-@import 'component/cta--lp';
-@import 'component/about';
-@import 'component/contents';
-@import 'component/qa';
-@import 'component/sidebar';
-@import 'component/article';
-@import 'component/social-link';
-@import 'component/footer';
+@import './component/topbar';
+@import './component/free-call';
+@import './component/nav';
+@import './component/header--copy';
+@import './component/service--item';
+@import './component/cta--lp';
+@import './component/about';
+@import './component/contents';
+@import './component/qa';
+@import './component/sidebar';
+@import './component/article';
+@import './component/social-link';
+@import './component/footer';
+@import './component/sidenav';
 
 /**
  * Your Custom Styles.
