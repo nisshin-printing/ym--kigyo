@@ -46,32 +46,33 @@ class NID_Crumbs {
 
 		ob_start();
 		?>
+		<div class="row">
+			<nav class="column" aria-label="あなたはここにいます!!" role="navigation">
+				<ul class="breadcrumbs">
+					<?php foreach ( $breadcrumbs_items as $item ) : ?>
 
-		<nav aria-label="あなたはここにいます!!" role="navigation">
-			<ul class="breadcrumbs">
-				<?php foreach ( $breadcrumbs_items as $item ) : ?>
+						<li>
+							<?php
+								$classes = '';
+								if ( $item['current'] ) {
+									$classes .= 'current';
+								}
 
-					<li>
-						<?php
-							$classes = '';
-							if ( $item['current'] ) {
-								$classes .= 'current';
-							}
+								$tag   = 'span';
+								$attrs = array( 'class' => $classes );
+								if ( $item['link'] && '#' !== $item['link'] ) {
+									$tag           = 'a';
+									$attrs['href'] = $item['link'];
+								}
 
-							$tag   = 'span';
-							$attrs = array( 'class' => $classes );
-							if ( $item['link'] && '#' !== $item['link'] ) {
-								$tag           = 'a';
-								$attrs['href'] = $item['link'];
-							}
+								NID_Html::element( $tag, $attrs, $item['text'] );
+							?>
+						</li>
 
-							NID_Html::element( $tag, $attrs, $item['text'] );
-						?>
-					</li>
-
-				<?php endforeach; ?>
-			</ul>
-		</nav>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+		</div>
 
 		<?php
 		return ob_get_clean();

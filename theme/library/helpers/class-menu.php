@@ -40,31 +40,31 @@ class NID_Menu {
 	 * @returns string
 	 */
 	public static function get_nav_menu( $theme_location = 'primary', $extras = array() ) {
-		$menu_class = isset( $extras['menu_class'] ) && ! empty( $extras['menu_class'] )
-			? $extras['menu_class']
-			: 'menu';
 
-		$container_class = 'menu' === $menu_class
-			? "$menu_class $menu_class--$theme_location"
-			: $menu_class;
+		$container = isset( $extras['container'] ) ? $extras['container'] : false;
 
-		$show_level_class = isset( $extras['show_level_class'] )
-			? (bool) $extras['show_level_class']
-			: true;
+		$menu_class = isset( $extras['menu_class'] ) ? $extras['menu_class'] : 'menu';
 
-		$wrap_class = "{$menu_class}__list";
+		$container_class = isset( $extras['container_class'] ) ? $extras['container_class'] : "{$menu_class}--{$theme_location}__wrap";
+
+		$show_level_class = isset( $extras['show_level_class'] ) ? (bool) $extras['show_level_class'] : false;
+
 		if ( $show_level_class ) {
-			$wrap_class .= " {$menu_class}__list--level-0";
+			$wrap_class .= " {$container_class}--wrap__level-0";
 		}
+
+		$menu_direction = isset( $extras['menu_direction'] ) ? ' ' . $extras['menu_direction'] : '';
+
+		$items_wrap = isset( $extras['items_wrap'] ) ? $extras['items_wrap'] : "<ul class=\"{$menu_class}{$menu_direction}\" role=\"menu\">%3\$s</ul>";
 
 		return wp_nav_menu( array_merge( array(
 			'echo'             => false,
 			'theme_location'   => $theme_location,
-			'container'        => 'nav',
+			'container'        => $container,
 			'container_class'  => $container_class,
 			'menu_class'       => $menu_class,
 			'show_level_class' => $show_level_class,
-			'items_wrap'       => "<ul class=\"{$wrap_class}\">%3\$s</ul>",
+			'items_wrap'       => $items_wrap,
 			'fallback_cb'      => false,
 			'walker'           => new NID_Walker_Nav_Menu
 		), $extras ) );

@@ -49,15 +49,17 @@ class NID_Pagination {
 		ob_start();
 		?>
 
-			<nav class="pagination">
-				<ul class="pagination__list">
+			<nav class="pagination--wrap">
+				<ul class="pagination">
 					<?php foreach ( $pagination_items as $item ) : ?>
 
-						<li class="pagination__list-item">
+						<li class="pagination--list-item">
 							<?php
-								$classes = 'pagination__item';
-								if ( 'page' !== $item['type'] ) {
-									$classes .= " pagination__item--{$item['type']}";
+								$classes = 'pagination--item';
+								if ( 'current' === $item['type'] ) {
+									$classes .= ' current';
+								} else if ( 'page' !== $item['type'] ) {
+									$classes .= " pagination--item__{$item['type']}";
 								}
 
 								$tag = 'span';

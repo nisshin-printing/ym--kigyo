@@ -5,9 +5,7 @@
  *
  */
 ?>
-<?php
-	if ( empty( $_GET['_pjax'] ) ) get_header();
-?>
+<?php get_header(); ?>
 
 <main id="js-main">
 
@@ -25,6 +23,4 @@
 
 </main>
 
-<?php
-	if ( empty( $_GET['_pjax'] ) ) get_footer();
-?>
+<?php get_footer(); ?>

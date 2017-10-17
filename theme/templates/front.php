@@ -1,9 +1,9 @@
 <div class="main--container">
 	<div class="row">
-		<aside id="js-sidebar" class="nav--sp_main column small-4"><?php get_sidebar(); ?></aside>
+		<div class="column large-3 sidebar--wrap"><?php get_sidebar(); ?></div>
+		<div class="sidenav--overlay js--sidenav--button"></div>
 
-		<div class="column small-12 large-8">
-
+		<div class="column small-12 large-8 contents">
 			<div class="contents--section">
 				<h2 class="contents--title"><a href="">セミナー情報<span class="badge">></span></a></h2>
 				<div class="contents--box">

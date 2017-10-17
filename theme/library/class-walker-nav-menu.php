@@ -1,17 +1,13 @@
 <?php
 /**
  * Walker Nav Menu extension
- * to support FLOCSS class naming
+ * to support BEM class naming
  * conventions
  *
+ * @author Max G J Panas <http://maxpanas.com>
  */
-
-
 // make sure this file is called by wp
 defined( 'ABSPATH' ) or die();
-
-
-
 /**
  * Class NID_Walker_Nav_Menu
  *
@@ -23,9 +19,6 @@ defined( 'ABSPATH' ) or die();
  * @uses  Walker_Nav_Menu
  */
 class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
-
-
-
 	/**
 	 * Starts the list before the elements are added.
 	 *
@@ -39,22 +32,15 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$list_classes = array(
-			'_item',
-			'_item -submenu is-dropdown-submenu'
+			' nested'
 		);
-
 		if ( isset( $args->show_level_class ) && $args->show_level_class ) {
-			$list_classes[] = '_list-level-' . ($depth + 1);
+			$list_classes[] = '__wrap--level-' . ($depth + 1);
 		}
-
 		// BEM-ify the given sub classes
-		$list_classes_str = NID_FLOCSS::get_flocss( 'c-nav', $list_classes );
-
-		$output .= "<ul class=\"$list_classes_str\" role=\"submenu\">";
+		$list_classes_str = NID_BEM::get_bem( $args->menu_class, $list_classes );
+		$output .= "<ul class=\"$list_classes_str\">";
 	}
-
-
-
 	/**
 	 * Start the element output.
 	 *
@@ -69,63 +55,49 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param int           $id     Current item ID.
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-
 		/// Menu Item Opening
-
-		$item_classes = array( '_item' );
-
-		// add classes to current/parent/ancestor items
+		$item_classes = array( '--item' );
 		if ( isset( $item->current ) && $item->current ) {
-			$item_classes[] = '_item -current';
+			$item_classes[] = '--item__current';
 		}
+		// add classes to current/parent/ancestor items
 		if ( isset( $item->current_item_ancestor ) && $item->current_item_ancestor ) {
-			$item_classes[] = '_item -ancestor';
+			$item_classes[] = '--item__ancestor';
 		}
 		if ( isset( $item->current_item_parent ) && $item->current_item_parent ) {
-			$item_classes[] = '_item -parent';
+			$item_classes[] = '--item__parent';
 		}
 		if ( isset( $item->has_children ) && $item->has_children ) {
-			$item_classes[] = '_item -has-children';
+			$item_classes[] = '--item__has-children';
 		}
-
 		// BEM-ify the given sub classes
-		$item_classes_str = NID_FLOCSS::get_flocss( 'c-nav', $item_classes );
-
+		$item_classes_str = NID_BEM::get_bem( $args->menu_class, $item_classes );
 		if ( isset( $item->classes[0] ) && ! empty( $item->classes[0] ) ) {
 			// the first item in the 'classes' array is the user-set class
 			// the rest of the classes are superfluous
 			$item_classes_str .= " {$item->classes[0]}";
 		}
-
-		$output .= "<li class=\"$item_classes_str\" role=\"menuitem\">";
-
+		$output .= "<li class=\"$item_classes_str\">";
 		/// Menu Link
-
 		$attrs = array_filter( array(
 			'title'  => $item->attr_title,
 			'target' => $item->target,
 			'rel'    => $item->xfn,
 			'href'   => ( ! empty( $item->url ) && '#' !== $item->url ) ? $item->url : '',
-			'class'  => 'c-nav_link'
+			'class'  => "{$args->menu_class}--link"
 		), function ( $attr ) {
 			// filter out the empty
 			// attributes
 			return ! empty( $attr );
 		});
-
 		$tag = isset( $attrs['href'] ) ? 'a' : 'span';
-
 		$link_content = $args->link_before
-										 . apply_filters( 'the_title', $item->title, $item->ID )
-										 . $args->link_after;
-
+		                . apply_filters( 'the_title', $item->title, $item->ID )
+		                . $args->link_after;
 		$output .= $args->before;
 		$output .= NID_Html::get_element( $tag, $attrs, $link_content );
 		$output .= $args->after;
 	}
-
-
-
 	/**
 	 * Ends the list of after the elements are added.
 	 *
@@ -138,11 +110,8 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param array  $args   An array of arguments. @see wp_nav_menu()
 	 */
 	public function end_lvl( &$output, $depth = 0, $args = array() ) {
-		$output .= '</ul>'; // end of .c-nav_list
+		$output .= '</ul>'; // end of .{$args->menu_class}--{$args->theme_location}
 	}
-
-
-
 	/**
 	 * Traverse elements to create list from elements.
 	 *
@@ -168,17 +137,12 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @return null Null on failure with no changes to parameters.
 	 */
 	function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
-
 		if ( isset( $children_elements[$element->ID] ) && ! empty( $children_elements[$element->ID] ) ) {
 			$element->has_children = true;
 			$element->current_item_ancestor = self::any_children_active( $element, $children_elements );
 		}
-
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
-
-
-
 	/**
 	 * Return whether a particular child
 	 * is an active ancestor
@@ -190,9 +154,6 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 	public static function is_child_active( $child ) {
 		return $child->current || $child->current_item_parent || $child->current_item_ancestor;
 	}
-
-
-
 	/**
 	 * Recursively go through the current
 	 * children tree and return true if any
@@ -208,17 +169,14 @@ class NID_Walker_Nav_Menu extends Walker_Nav_Menu {
 		if ( ! isset( $children_elements[ $element->ID ] ) ) {
 			return false;
 		}
-
 		foreach ( $children_elements[ $element->ID ] as $child ) {
 			if ( self::is_child_active( $child ) ) {
 				return true;
 			}
-
 			if ( self::any_children_active( $child, $children_elements ) ) {
 				return true;
 			}
 		}
-
 		return false;
 	}
 }
