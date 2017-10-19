@@ -18,3 +18,4 @@
 	</div>
 </div>
 <?php get_template_part( 'elements/cta--kigyo-regal' ); ?>
+<?php get_template_part( 'elements/cta--about-komon' ); ?>
