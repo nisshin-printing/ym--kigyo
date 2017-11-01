@@ -25,7 +25,7 @@
 	<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js')</script>
 
 	<?php // load the core js polyfills ?>
-	<script async defer src="<?php echo get_template_directory_uri(), '/assets/js/core.js'; ?>"></script>
+	<script async defer "//www.law-yamashita.com/wp-content/themes/ym-home/assets/js/core.js"></script>
 
 	<?php wp_head(); ?>
 </head>

@@ -14,6 +14,6 @@
 			<p class="cta--lp_button"><a href="" class="button round">詳しくはこちら</a></p>
 			</div>
 		</div>
-		<div class="column small-12 large-6 text-center"><img src="//placehold.jp/400x300.png" alt=""></div>
+		<div class="column small-12 large-6 text-center"><img class="thumbnail" src="<?php echo get_template_directory_uri(), '/assets/img/lp/cta--komon.jpg'; ?>" alt="顧問弁護士を置くことは大きなトラブルを避ける有効な予防策です。"></div>
 	</div>
 </div>

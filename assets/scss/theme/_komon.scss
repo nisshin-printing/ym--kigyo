@@ -1,0 +1,23 @@
+$komon_id: '6';
+.postid-#{$komon_id} {}
+
+.header--lp__komon {
+		background-image: url('#{$p_images}/lp/bg-header--komon.jpg');
+		padding: 3rem 0;
+}
+
+.title--lp__komon {
+		>span {
+				background-color: #39b44a;
+				color: #FFF;
+				padding: 5px 10px;
+		}
+}
+
+.cta--lp.--komon {
+		background-color: #a9cd99;
+}
+
+.nav--lp__komon {
+		color: #39b44a;
+}

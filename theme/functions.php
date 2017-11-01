@@ -99,7 +99,7 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		/**
 		 * Custom Post Type
 		 */
-		// include_once( "$theme_dir/post-type/init.php" );
+		include_once( "$theme_dir/post-type/init.php" );
 		/**
 		 * Short Codes
 		 */
@@ -130,7 +130,7 @@ if ( ! function_exists( 'theme_scripts' ) ) {
 		$theme_dir = get_stylesheet_directory_uri();
 		wp_deregister_script( 'jquery' );
 		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, true );
-		wp_enqueue_script( 'main', "//www.law-yamashita.com/wp-content/themes/ym-home/assets/js/main.js", array( 'jquery' ), '', true );
+		wp_enqueue_script( 'main', "//www.law-yamashita.com/wp-content/themes/ym-home/assets/js/main.js", array( 'jquery' ), null, true );
 	}
 }
 /**
