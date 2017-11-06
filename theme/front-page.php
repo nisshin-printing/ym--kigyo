@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+	/**
+	 * Template Name: フロントページ
+	 */
+
+	get_header();
+?>
 <main>
 	<div class="pageheader -front">
 		<h1>山下江法律事務所<br>企業法務サイト</h1>
@@ -8,23 +14,27 @@
 				<h2 class="service--item_title">契約書</h2>
 				<p class="service--item_desc"><u>契約書のひな型は当事者双方にとって中立的な立場</u>から作成されていますので、当事者の力関係を正確に反映できていない場合があります。<br>弁護士に契約書の作成・確認を依頼した場合には特殊事情を反映させたり適切な修正をしたりと、<u>より実態に沿った契約書を作成</u>できます。
 				<p class="service--item_desc"><strong class="underline">弁護士による契約書作成・確認で将来の法的トラブルを回避しましょう</strong>。</p>
-				<p class="service--item_button"><a href="" class="button expanded round">詳しくはこちら</a></p>
+				<p class="service--item_button"><a href="<?php echo home_url(), '/service/keiyaku/'; ?>" class="button expanded round">詳しくはこちら</a></p>
 			</div>
 			<div class="service--item column small-12 large-6">
 				<p class="service--item_photo"><?php NID_SVG::icon( 'people', array( 'class' => 'people' ), 'people' ); ?></p>
-				<h2 class="service--item_title">企業法務</h2>
+				<h2 class="service--item_title">顧問弁護士</h2>
 				<p class="service--item_desc"><u>何かトラブルが発生した後で弁護士に相談すればよい</u>とお考えではないでしょうか。<br>企業経営においては社外・社内あらゆるところにリスクや法律問題が潜んでおり、いったん予期せぬ法的トラブルが発生してしまうと、その解決のために多大な時間、費用や労力がかかってしまいます。</p>
 				<p class="service--item_desc"><strong class="underline">法的トラブルを未然に防ぐための備え（予防法務）が非常に大切です。</strong></p>
-				<p class="service--item_button"><a href="" class="button expanded round">詳しくはこちら</a></p>
+				<p class="service--item_button"><a href="<?php echo home_url(), '/service/komon'; ?>" class="button expanded round">詳しくはこちら</a></p>
 			</div>
 		</div>
 	</div>
+
+
+
 	<?php get_template_part( 'elements/cta--kigyo-regal' ); ?>
-	<?php get_template_part( 'elements/cta--about-komon' ); ?>
+
+
+
 	<div class="row">
 		<div class="column large-3 sidebar--wrap"><?php get_sidebar(); ?></div>
 		<div class="sidenav--overlay js--sidenav--button"></div>
-
 		<div class="column small-12 large-8 contents --mt0 --pt0">
 			<div class="contents--section">
 				<h2 class="contents--title"><a href="">セミナー情報<span class="badge">></span></a></h2>
@@ -46,134 +56,45 @@
 				</div>
 			</div>
 
-			<section class="contents--section">
+
+			
+			<section class="contents--section contents--section__service">
+				<h2 class="contents--title">取扱業務ピックアップ</h2>
 				<div class="row small-up-1 medium-up-2">
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
+					
+					<?php
+						include( get_template_directory() . '/config/service.php' );
+						for ( $i = 0; $i < 4; $i++ ) :
+					?>
+					<article class="article--category column">
+						<figure class="article--category_thumbnail text-center">
+							<a href="<?php echo get_page_link( $service[$i]['id'] ); ?>" rel="nofollow"><img src="<?php echo $service[$i]['image']; ?>" alt="イメージ画像"></a>
 						</figure>
-						<header class="article--loop_header">
-							<time class="article--loop_time" itemprop="datePublished" datetime="">2017.06.06</time>
-							<h3 class="article--loop_title"><a href="">これはテストです。</a></h3>
+						<header class="article--category_header">
+							<span class="article--category_icon"><?php NID_SVG::icon( $service[$i]['icon'], array(), get_the_title( $service[$i]['id'] ) . 'のアイコン' ) ?></span>
+							<h3 class="article--category_title"><a href="<?php echo get_page_link( $service[$i]['id'] ); ?>"><?php echo get_the_title( $service[$i]['id'] ); ?></a></h3>
+							<p class="article--category_desc"><?php echo $service[$i]['desc']; ?></p>
 						</header>
+						<div class="article--category_content">
+							<ol>
+								<?php
+									foreach ( $service[$i]['children'] as $child ) {
+										echo '<li><a href="', get_page_link( $child ), '">', get_the_title( $child ), '</a></li>';
+									}
+								?>
+							</ol>
+							<p class="text-center contents--section_button"><a href="<?php echo get_page_link( $service[$i]['id'] ); ?>" class="button secondary"><?php NID_SVG::icon( 'list', array() ); ?>詳しく見る</a></p>
+						</div>
 					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<time class="article--loop_time" itemprop="datePublished" datetime="">2017.06.06</time>
-							<h3 class="article--loop_title"><a href="">これは長文タイトルのテストです。これは長文タイトルのテストです。</a></h3>
-						</header>
-					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<time class="article--loop_time" itemprop="datePublished" datetime="">2017.06.06</time>
-							<h3 class="article--loop_title"><a href="">これは長文タイトルのテストです。これは長文タイトルのテストです。これは長文タイトルのテストです。これは長文タイトルのテストです。</a></h3>
-						</header>
-					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<time class="article--loop_time" itemprop="datePublished" datetime="">2017.06.06</time>
-							<h3 class="article--loop_title"><a href="">これはテストです。</a></h3>
-						</header>
-					</article>
+					<?php
+						endfor;
+					?>
+
 				</div>
-				<p class="text-center contents--section_button"><a href="" class="button large"><?php NID_SVG::icon( 'list', array() ); ?>最新記事の一覧を見る</a></p>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="<?php echo get_page_link( '5481' ); ?>" class="button large"><?php NID_SVG::icon( 'list', array() ); ?>取扱業務の一覧を見る</a></p>
 			</section>
 
-			<section class="contents--section">
-				<h2 class="contents--title">カテゴリー</h2>
-				<div class="row small-up-1 medium-up-2">
-					<article class="article--category column">
-						<figure class="article--category_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/350x200.png" alt=""></a>
-						</figure>
-						<header class="article--category_header">
-							<span class="article--category_icon"><?php NID_SVG::icon( 'list', array(), 'カテゴリー01のアイコン' ) ?></span>
-							<h3 class="article--category_title"><a href="">カテゴリー01</a></h3>
-							<p class="article--category_desc">カテゴリー01の説明文です。カテゴリー01の説明文です。カテゴリー01の説明文です。カテゴリー01の説明文です。カテゴリー01の説明文です。カテゴリー01の説明文です。</p>
-						</header>
-						<div class="article--category_content">
-							<ol>
-								<li><a href="">カテゴリー01の記事　-　01</a></li>
-								<li><a href="">カテゴリー01の記事　-　02</a></li>
-								<li><a href="">カテゴリー01の記事　-　03</a></li>
-								<li><a href="">カテゴリー01の記事　-　04</a></li>
-								<li><a href="">カテゴリー01の記事　-　05</a></li>
-							</ol>
-							<p class="text-center contents--section_button"><a href="" class="button"><?php NID_SVG::icon( 'list', array() ); ?>カテゴリ01の一覧を見る</a></p>
-						</div>
-					</article>
-					<article class="article--category column">
-						<figure class="article--category_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/350x200.png" alt=""></a>
-						</figure>
-						<header class="article--category_header">
-							<span class="article--category_icon"><?php NID_SVG::icon( 'list', array(), 'カテゴリー02のアイコン' ) ?></span>
-							<h3 class="article--category_title"><a href="">カテゴリー02</a></h3>
-							<p class="article--category_desc">カテゴリー02の説明文です。カテゴリー02の説明文です。カテゴリー02の説明文です。カテゴリー02の説明文です。カテゴリー02の説明文です。カテゴリー02の説明文です。</p>
-						</header>
-						<div class="article--category_content">
-							<ol>
-								<li><a href="">カテゴリー02の記事　-　01</a></li>
-								<li><a href="">カテゴリー02の記事　-　02</a></li>
-								<li><a href="">カテゴリー02の記事　-　03</a></li>
-								<li><a href="">カテゴリー02の記事　-　04</a></li>
-								<li><a href="">カテゴリー02の記事　-　05</a></li>
-							</ol>
-							<p class="text-center contents--section_button"><a href="" class="button"><?php NID_SVG::icon( 'list', array() ); ?>カテゴリー02の一覧を見る</a></p>
-						</div>
-					</article>
-					<article class="article--category column">
-						<figure class="article--category_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/350x200.png" alt=""></a>
-						</figure>
-						<header class="article--category_header">
-							<span class="article--category_icon"><?php NID_SVG::icon( 'list', array(), 'カテゴリー03のアイコン' ) ?></span>
-							<h3 class="article--category_title"><a href="">カテゴリー03</a></h3>
-							<p class="article--category_desc">カテゴリー03の説明文です。カテゴリー03の説明文です。カテゴリー03の説明文です。カテゴリー03の説明文です。カテゴリー03の説明文です。カテゴリー03の説明文です。</p>
-						</header>
-						<div class="article--category_content">
-							<ol>
-								<li><a href="">カテゴリー03の記事　-　01</a></li>
-								<li><a href="">カテゴリー03の記事　-　02</a></li>
-								<li><a href="">カテゴリー03の記事　-　03</a></li>
-								<li><a href="">カテゴリー03の記事　-　04</a></li>
-								<li><a href="">カテゴリー03の記事　-　05</a></li>
-							</ol>
-							<p class="text-center contents--section_button"><a href="" class="button"><?php NID_SVG::icon( 'list', array() ); ?>カテゴリー03の一覧を見る</a></p>
-						</div>
-					</article>
-					<article class="article--category column">
-						<figure class="article--category_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/350x200.png" alt=""></a>
-						</figure>
-						<header class="article--category_header">
-							<span class="article--category_icon"><?php NID_SVG::icon( 'list', array(), 'カテゴリー04のアイコン' ) ?></span>
-							<h3 class="article--category_title"><a href="">カテゴリー04</a></h3>
-							<p class="article--category_desc">カテゴリー04の説明文です。カテゴリー04の説明文です。カテゴリー04の説明文です。カテゴリー04の説明文です。カテゴリー04の説明文です。カテゴリー04の説明文です。</p>
-						</header>
-						<div class="article--category_content">
-							<ol>
-								<li><a href="">カテゴリー04の記事　-　01</a></li>
-								<li><a href="">カテゴリー04の記事　-　02</a></li>
-								<li><a href="">カテゴリー04の記事　-　03</a></li>
-								<li><a href="">カテゴリー04の記事　-　04</a></li>
-								<li><a href="">カテゴリー04の記事　-　05</a></li>
-							</ol>
-							<p class="text-center contents--section_button"><a href="" class="button"><?php NID_SVG::icon( 'list', array() ); ?>カテゴリー04の一覧を見る</a></p>
-						</div>
-					</article>
-				</div>
-				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="" class="button large"><?php NID_SVG::icon( 'list', array() ); ?>カテゴリーの一覧を見る</a></p>
-			</section>
+<!--
 
 			<div class="contents--section">
 				<h2 class="contents--title"><a href="">Q&A<span class="badge">></span></a></h2>
@@ -235,8 +156,74 @@
 				</div>
 			</section>
 
+-->
+
+			<?php
+				$args = array(
+					'order' => 'DESC',
+					'orderby' => 'modified',
+					'posts_per_page' => 4,
+					'post_status'    => 'publish'
+				);
+				$news = new WP_Query( $args );
+				if ( $news->have_posts() ) :
+			?>
 			<div class="contents--section">
-				<h2 class="contents--title"><a href="">最新情報<span class="badge">></span></a></h2>
+				<h2 class="contents--title"><a href="<?php echo get_page_link( '5749' ); ?>">最新情報<span class="badge">></span></a></h2>
+				<?php
+					while ( $news->have_posts() ) : $news->the_post();
+				?>
+				<article <?php post_class( 'post post--topic' ); ?> itemscope itemtype="http://schema.org/Article" itemref="author-prof">
+					<meta itemprop="description" content="<?php the_excerpt(); ?>">
+					<ul class="post--meta menu">
+						<li class="published" itemprop="datePublished dateCreated" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"></li>
+						<li class="updated" itemprop="dateModified" datetime="<?php echo get_the_modified_time( 'Y-m-d' ); ?>"></li>
+						<li class="author hide" itemprop="author copyrightHolder editor" itemscope itemtype="http://schema.org/Person"><span class="author" itemprop="name"><?php bloginfo( 'name' ); ?></span></li>
+					</ul>
+					<div class="row align-middle">
+						<?php
+							if ( has_post_thumbnail() ) :
+						?>
+						<div class="column small-4"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+						<div class="column small-8">
+						<?php
+							else :
+						?>
+							<div class="column small-12">
+						<?php
+							endif;
+						?>
+							<h3 itemprop="about headline" class="entry-title post--title">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+									<span class="title--small title--block"><?php echo $job = ( get_post_meta ( $post->ID, 'subtitle', true ) ) ? get_post_meta ( $post->ID, 'subtitle', true )  : '' ?></span>
+								</a>
+							</h3>
+						</div>
+					</div>
+					<?php
+						$categories = get_the_category( $post->ID );
+					?>
+					<div class="post--label">
+					<?php
+						foreach ( $categories as $category ) :
+					?>
+						<a href="<?php echo get_category_link( $category->cat_ID ); ?>" class="label secondary"><?php echo $category->name; ?></a>
+					<?php
+							endforeach;
+					?>
+					</div>
+				</article>
+				<?php
+					endwhile;
+				?>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧</a></p>
+			</div>
+				<?php endif; ?>
+
+
+			<div class="contents--section">
+				<h2 class="contents--title"><a href="https://www.law-yamashita.com/column" target="_blank">事務所の最新情報<span class="badge">></span></a></h2>
 				<?php
 					$url = 'https://www.law-yamashita.com/feed';
 					$url = sprintf( esc_html( "%s" ), $url );
@@ -258,16 +245,22 @@
 						$f_link = esc_url( $item->get_permalink() );
 						$f_date = $item->get_date( 'Y-m-d' );
 						$f_title = esc_html( $item->get_title() );
+						$f_category = '';
+						foreach ( $item->get_categories() as $category ) {
+							$f_category .= $category->get_label();
+						}
 						$output .= <<< EOM
 <dl>
-	<dt><span class="label secondary">{$f_date}</span></dt>
+	<dt><span class="label secondary">{$f_date}</span>　<span class="label">{$f_category}</span></dt>
 	<dd><a href="{$f_link}" target="_blank">{$f_title}</a></dd>
 </dl>
 EOM;
 					}
 					echo $output;
 				?>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧</a></p>
 			</div>
+			
 		</div>
 	</div>
 </main>

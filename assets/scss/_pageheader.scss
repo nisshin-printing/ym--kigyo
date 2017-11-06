@@ -1,6 +1,8 @@
 .pageheader {
-		background: none;
+		background: #4b6cb7;
+		background: linear-gradient(to right, #4b6cb7, #182848);
 		&.-front {
 				text-align: center;
+				background: none;
 		}
 }

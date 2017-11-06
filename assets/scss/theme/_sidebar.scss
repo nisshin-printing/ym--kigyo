@@ -1,0 +1,11 @@
+.sidebar--banner {
+		border-top-color: $primary-color;
+		border-bottom-color: $primary-color;
+		padding: 10px 0;
+		ul {
+				margin-bottom: 0;
+		}
+		li:not(:last-child) {
+				border-bottom: 1px solid $primary-color;
+		}
+}

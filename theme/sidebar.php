@@ -6,41 +6,9 @@
 		<span></span>
 	</a>
 </button>
-<?php if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) || is_tax( 'cases-cat' ) ) : ?>
+<?php if ( is_archive() || is_home() || is_front_page() ) : ?>
 <div class="sidebar--item">
-	<h5 class="sidebar--title">解決事例カテゴリー</h5>
-	<ul class="menu vertical" role="menu">
-	<?php
-		$terms = get_terms( 'cases-cat', array(
-			'order' => 'DESC',
-			'orderby' => 'count'
-		) );
-		foreach ( $terms as $term ) {
-			echo '<li class="menu--item"><a href="' . get_term_link( $term ) . '" class="menu--link">' . $term->name . '</a></li>';
-		}
-	?>
-	</ul>
-</div>
-<?php endif; ?>
-<?php if ( is_post_type_archive( 'voice' ) || is_singular( 'voice' ) || is_tax( 'voice-cat' ) ) : ?>
-<div class="sidebar--item">
-	<h5 class="sidebar--title">分野カテゴリー</h5>
-	<ul class="menu vertical" role="menu">
-	<?php
-		$terms = get_terms( 'voice-cat', array(
-			'order' => 'DESC',
-			'orderby' => 'count'
-		) );
-		foreach ( $terms as $term ) {
-			echo '<li class="menu--item"><a href="' . get_term_link( $term ) . '" class="menu--link">' . $term->name . '</a></li>';
-		}
-	?>
-	</ul>
-</div>
-<?php endif; ?>
-<?php if ( is_archive() || is_home() ) : ?>
-<div class="sidebar--item">
-	<h5 class="sidebar--title">カテゴリー</h5>
+	<h5 class="sidebar--title">お知らせ</h5>
 	<ul class="menu vertical" role="menu">
 	<?php
 		$categoryies = get_categories( array(
@@ -58,7 +26,7 @@
 	<h5 class="sidebar--title">相談予約</h5>
 	<p class="free-call"><a href="tel:0120783409"><?php NID_SVG::icon( 'phone', array( 'class' => 'free-call--icon' ), '電話する' ); ?>0120-7834-09</a></p>
 	<p class="free-call--hours">平日9時～18時<br>土曜10時～17時</p>
-	<p class="free-call--button"><a href="" class="button large">お問い合わせ</a></p>
+	<p class="free-call--button"><a href="https://www.law-yamashita.com/contact" class="button large">お問い合わせ</a></p>
 </div>
 <?php /*
 <div class="sidebar--item sidebar--banner">
@@ -85,6 +53,7 @@
 	<h5 class="sidebar--title">各種専門サイト</h5>
 	<nav>
 		<ul class="menu vertical">
+			<li><a href="https://www.law-yamashita.com/" target="_blank"><img src="//i0.wp.com/www.law-yamashita.com/wp-content/uploads/2016/04/title-logo-1.png" class="sites--img bg-else" alt="弁護士法人山下江法律事務所のメインサイト"></a></li>
 			<?php
 				include( get_template_directory() . '/config/sites.php' );
 				$sites_img = '//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/sites/light--';

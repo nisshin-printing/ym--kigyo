@@ -1,0 +1,10 @@
+a {
+		color: $primary-color;
+}
+
+.button {
+		background: $primary-color;
+		&:hover {
+				background: darken($primary-color, 15%);
+		}
+}
