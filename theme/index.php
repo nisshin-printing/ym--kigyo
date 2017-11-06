@@ -34,14 +34,22 @@ if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) ) {
 		<div class="sidenav--overlay js--sidenav--button"></div>
 		<div class="column contents">
 			<?php
-				if ( is_archive() ) {
-					while ( have_posts() ) : the_post();
-						get_template_part( './templates/content' );
-					endwhile;
-				} else if ( is_page() || is_single() ) {
-					while ( have_posts() ) : the_post();
-						the_content();
-					endwhile;
+				if ( have_posts() ) {
+					if ( is_archive() || is_home() ) {
+						while ( have_posts() ) : the_post();
+							get_template_part( './templates/content' );
+						endwhile;
+					} else if ( is_page( 'service' ) ) {
+						get_template_part( './templates/page--service' );
+					} else if ( is_page( 'cases' ) || is_page( 'voice' ) ) {
+						get_template_part( './templates/page--include-feed' );
+					} else if ( is_page() || is_single() ) {
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile;
+					}
+				} else {
+					echo '<h2 class="text-center">記事がありません。</h2>';
 				}
 			?>
 		</div>

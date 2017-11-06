@@ -67,12 +67,8 @@
 						for ( $i = 0; $i < 4; $i++ ) :
 					?>
 					<article class="article--category column">
-						<figure class="article--category_thumbnail text-center">
-							<a href="<?php echo get_page_link( $service[$i]['id'] ); ?>" rel="nofollow"><img src="<?php echo $service[$i]['image']; ?>" alt="イメージ画像"></a>
-						</figure>
 						<header class="article--category_header">
-							<span class="article--category_icon"><?php NID_SVG::icon( $service[$i]['icon'], array(), get_the_title( $service[$i]['id'] ) . 'のアイコン' ) ?></span>
-							<h3 class="article--category_title"><a href="<?php echo get_page_link( $service[$i]['id'] ); ?>"><?php echo get_the_title( $service[$i]['id'] ); ?></a></h3>
+							<h3 class="article--category_title"><a href="<?php echo get_page_link( $service[$i]['id'] ); ?>"><span class="article--category_icon"><?php NID_SVG::icon( $service[$i]['icon'], array(), get_the_title( $service[$i]['id'] ) . 'のアイコン' ) ?></span><?php echo get_the_title( $service[$i]['id'] ); ?></a></h3>
 							<p class="article--category_desc"><?php echo $service[$i]['desc']; ?></p>
 						</header>
 						<div class="article--category_content">
