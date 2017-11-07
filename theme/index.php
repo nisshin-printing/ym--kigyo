@@ -40,9 +40,10 @@ if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) ) {
 							get_template_part( './templates/content' );
 						endwhile;
 					} else if ( is_page( 'service' ) ) {
-						get_template_part( './templates/page--service' );
+						get_template_part( 'templates/page--service' );
 					} else if ( is_page( 'cases' ) || is_page( 'voice' ) ) {
-						get_template_part( './templates/page--include-feed' );
+						$url = ( is_page( 'cases' ) ) ? 'https://www.law-yamashita.com/feed?post_type=cases&cases-cat=corporation' : 'https://www.law-yamashita.com/feed?post_type=voice&voice-cat=corporation';
+						include locate_template( './templates/page--include-feed.php' );
 					} else if ( is_page() || is_single() ) {
 						while ( have_posts() ) : the_post();
 							the_content();

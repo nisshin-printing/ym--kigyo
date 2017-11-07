@@ -1,19 +1,4 @@
 <?php
-	$url = 'https://www.law-yamashita.com/feed';
-	$category = 'corporation';
-	if ( is_page( 'cases' ) ) {
-		$name = '解決事例';
-		$slug = 'cases';
-	} else if ( is_page( 'voice' ) ) {
-		$name = 'お客様の声';
-		$slug = 'voice';
-	} else {
-		$name = 'お知らせ';
-		$slug = 'column';
-	}
-	$url = 'https://www.law-yamashita.com/feed?post_type=cases&cases-cat=corporation';
-	echo $url;
-	$button = `<p class="text-center">メインサイトに多数の{$name}を掲載しています。<br><a href="https://www.law-yamashita.com/{$slug}-category/{$category}" target="_blank" class="button large">{$name}をもっと見る</a></p>`;
 	$url = sprintf( esc_html( "%s" ), $url );
 	add_filter( 'wp_feed_cache_transient_lifetime', function() { return 1800; } );
 	include_once( ABSPATH . WPINC . '/feed.php' );
@@ -34,12 +19,15 @@
 		$f_date = $item->get_date( 'Y-m-d' );
 		$f_title = esc_html( $item->get_title() );
 		$f_content = $item->get_content();
-		$output .= <<< EOM
-<dl>
-<dt><a href="{$f_link}" target="_blank">{$f_title}</a></dt>
-<dd>{$f_content}</dd>
-</dl>
-EOM;
-	}
-	echo $output, $button;
 ?>
+<article class="post post--show" itemscope itemtype="http://schema.org/Article" itemref="author-prof">
+	<ul class="post--meta menu">
+		<li class="published" itemprop="datePublished dateCreated" datetime="<?php echo $f_date; ?>"></li>
+		<li class="updated" itemprop="dateModified" datetime="<?php echo $f_date; ?>"></li>
+	</ul>
+	<h2 itemprop="about headline" class="entry-title post--title"><?php echo $f_title; ?></h2>
+	<div class="content-post content-cases"><?php echo $f_content; ?></div>
+</article>
+
+<?php
+	}
