@@ -73,11 +73,35 @@
 						</header>
 						<div class="article--category_content">
 							<ol>
-								<?php
-									foreach ( $service[$i]['children'] as $child ) {
+							<?php
+								foreach ( $service[$i]['children'] as $child ) {
+									if ( ! is_array( $child ) ) {
 										echo '<li><a href="', get_page_link( $child ), '">', get_the_title( $child ), '</a></li>';
+									} else {
+										echo '<ul>';
+										foreach ( $child as $grandson ) {
+											if ( ! is_array( $grandson ) ) {
+												echo '<li><a href="', get_page_link( $grandson ), '">', get_the_title( $grandson ), '</a></li>';
+											} else {
+												echo '<ul>';
+												foreach ( $grandson as $great ) {
+													if ( ! is_array( $great ) ) {
+														echo '<li><a href="', get_page_link( $great ), '">', get_the_title( $great ), '</a></li>';
+													} else {
+														echo '<ul>';
+														foreach ( $grandson as $great ) {
+																echo '<li><a href="', get_page_link( $great ), '">', get_the_title( $great ), '</a></li>';
+														}
+														echo '</ul>';
+													}
+												}
+												echo '</ul>';
+											}
+										}
+										echo '</ul>';
 									}
-								?>
+								}
+							?>
 							</ol>
 							<p class="text-center contents--section_button"><a href="<?php echo get_page_link( $service[$i]['id'] ); ?>" class="button secondary"><?php NID_SVG::icon( 'list', array() ); ?>詳しく見る</a></p>
 						</div>

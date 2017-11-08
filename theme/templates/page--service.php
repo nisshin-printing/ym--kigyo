@@ -13,7 +13,31 @@
 			<ol>
 				<?php
 					foreach ( $item['children'] as $child ) {
-						echo '<li><a href="', get_page_link( $child ), '">', get_the_title( $child ), '</a></li>';
+						if ( ! is_array( $child ) ) {
+							echo '<li><a href="', get_page_link( $child ), '">', get_the_title( $child ), '</a></li>';
+						} else {
+							echo '<ul>';
+							foreach ( $child as $grandson ) {
+								if ( ! is_array( $grandson ) ) {
+									echo '<li><a href="', get_page_link( $grandson ), '">', get_the_title( $grandson ), '</a></li>';
+								} else {
+									echo '<ul>';
+									foreach ( $grandson as $great ) {
+										if ( ! is_array( $great ) ) {
+											echo '<li><a href="', get_page_link( $great ), '">', get_the_title( $great ), '</a></li>';
+										} else {
+											echo '<ul>';
+											foreach ( $grandson as $great ) {
+													echo '<li><a href="', get_page_link( $great ), '">', get_the_title( $great ), '</a></li>';
+											}
+											echo '</ul>';
+										}
+									}
+									echo '</ul>';
+								}
+							}
+							echo '</ul>';
+						}
 					}
 				?>
 			</ol>
