@@ -1,0 +1,24 @@
+.fp--topheader {
+		background: #606c88;
+		background: linear-gradient(to right, #606c88, #3f4c6b);
+		.copy--title {
+				color: #FFF;
+				font-size: 2rem;
+		}
+		.copy--desc {
+				color: #FFF;
+				margin: 1em 0;
+		}
+		.button.hollow {
+				border-color: $primary-color;
+				color: $primary-color;
+		}
+}
+
+.pageheader.-front {
+		margin-top: 0;
+		padding-top: 0;
+		.service--item {
+				padding-top: 50px;
+		}
+}

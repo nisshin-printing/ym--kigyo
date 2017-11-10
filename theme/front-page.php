@@ -6,8 +6,8 @@
 	get_header();
 ?>
 <main>
+	<?php get_template_part( './elements/fp-topheader' ); ?>
 	<div class="pageheader -front">
-		<h1>山下江法律事務所<br>企業法務サイト</h1>
 		<div class="row">
 			<div class="service--item column small-12 large-6">
 				<p class="service--item_photo"><?php NID_SVG::icon( 'sheet', array( 'class' => 'sheet' ), 'sheet' ); ?></p>
@@ -29,6 +29,10 @@
 
 
 	<?php get_template_part( 'elements/cta--kigyo-regal' ); ?>
+
+
+
+	<?php get_template_part( './elements/fp-welcome-mess' ); ?>
 
 
 

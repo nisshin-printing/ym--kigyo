@@ -49,28 +49,4 @@
 		) );
 	?>
 </div>
-<div class="sidebar--item sidebar--banner">
-	<h5 class="sidebar--title">各種専門サイト</h5>
-	<nav>
-		<ul class="menu vertical">
-			<li><a href="https://www.law-yamashita.com/" target="_blank"><img src="//i0.wp.com/www.law-yamashita.com/wp-content/uploads/2016/04/title-logo-1.png" class="sites--img bg-else" alt="弁護士法人山下江法律事務所のメインサイト"></a></li>
-			<?php
-				include( get_template_directory() . '/config/sites.php' );
-				$sites_img = '//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/sites/light--';
-				foreach ( $sites as $site ) {
-					if ( 'another' !== $site['name'] ) {
-						$url = ( $site['ssl'] ) ? 'https://hiroshima-' : 'http://www.hiroshima-';
-						$url = $url . $site['name'] . '.com';
-						$bg = ( $site['bg'] ) ? 'bg-' . $site['name'] : 'bg-else';
-						$img = $sites_img . $site['name'] . '.png';
-						$alt = ( $site['alt'] ) ? $site['alt'] : '弁護士法人山下江法律事務所の専門サイト';
-						echo <<< EOT
-<li><a href="$url" target="_blank" class="$bg"><img src="$img" alt="$alt"></a></li>
-EOT;
-					}
-				}
-			?>
-		</ul>
-	</nav>
-</div>
 </aside>
