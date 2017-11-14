@@ -39,16 +39,43 @@ if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) ) {
 						while ( have_posts() ) : the_post();
 							get_template_part( './templates/content' );
 						endwhile;
+
 					} else if ( is_page( 'service' ) ) {
 						get_template_part( 'templates/page--service' );
+
 					} else if ( is_page( 'cases' ) || is_page( 'voice' ) ) {
-						$url = ( is_page( 'cases' ) ) ? 'https://www.law-yamashita.com/feed?post_type=cases&cases-cat=corporation' : 'https://www.law-yamashita.com/feed?post_type=voice&voice-cat=corporation';
-						include locate_template( './templates/page--include-feed.php' );
+						$is_type = ( is_page( 'cases' ) ) ? 'cases' : 'voice';
+						$show_cat = ( is_page( 'cases' ) ) ? '93' : '126';
+						include locate_template( './templates/page--cases-voice.php' );
+
+					} else if ( is_page( 'members' ) ) {
+						get_template_part( './templates/page--members' );
+
+					} else if ( is_page( 'access' ) ) {
+						$page_id = '281';
+						include locate_template( './templates/page.php' );
+
+					} else if ( is_page( 'firm' ) ) {
+						$page_id = '151';
+						include locate_template( './templates/page.php' );
+
+					} else if ( is_page( 'seminar' ) ) {
+						$page_id = '3599';
+						include locate_template( './templates/page.php' );
+
+					} else if ( is_page( 'kairo' ) ) {
+						get_template_part( './templates/page--kairo' );
+
+					} else if ( is_page( 'consulting' ) ) {
+						$page_id = '4618';
+						include locate_template( './templates/page.php' );
+
 					} else if ( is_page() || is_single() ) {
 						while ( have_posts() ) : the_post();
 							the_content();
 						endwhile;
 					}
+
 				} else {
 					echo '<h2 class="text-center">記事がありません。</h2>';
 				}

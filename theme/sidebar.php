@@ -10,13 +10,20 @@
 <div class="sidebar--item">
 	<h5 class="sidebar--title">お知らせ</h5>
 	<ul class="menu vertical" role="menu">
+		<ul class="menu nested">
 	<?php
 		$categoryies = get_categories( array(
 			'order' => 'DESC',
 			'orderby' => 'count'
 		) );
 		foreach ( $categoryies as $category ) {
-			echo '<li class="menu--item"><a href="' . get_category_link( $category->term_id ) . '" class="menu--link">' . $category->name . '　（' . $category->count . '）</a></li>';
+			echo '<li class="menu--item"><a href="', get_category_link( $category->term_id ), '" class="menu--link">', $category->name, '　（', $category->count, '）</a></li>';
+		}
+		echo '</ul>';
+		
+		$news_pages = array( '5641', '5644', '5648' );
+		foreach ( $news_pages as $page ) {
+			echo '<li class="menu--item"><a href="', get_category_link( $page ), '" class="menu--link">', get_the_title( $page ), '</a></li>';
 		}
 	?>
 	</ul>

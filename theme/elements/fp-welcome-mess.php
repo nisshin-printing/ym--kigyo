@@ -28,7 +28,7 @@
 				</picture>
 			</div>
 			<div class="column small-12 medium-6 large-8">
-				<h2 class="title--border-bottom">副代表あいさつ</h2>
+				<h2 class="title--border-bottom">チームリーダーあいさつ</h2>
 				<div class="message--paragraph">
 					<p>山下江法律事務所には「企業法務チーム」があります。</p>
 					<p>チームのメンバーは，<a href="https://www.law-yamashita.com/members/shin-tanaka" title="副代表の田中伸について" target="_blank">リーダーの田中伸</a>を含めて，企業法務案件を比較的多く扱っている弁護士４名と秘書３名の総勢７名です。</p>

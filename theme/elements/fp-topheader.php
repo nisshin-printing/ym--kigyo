@@ -51,8 +51,8 @@
 			</div>
 			<p class="topheader--button"><a href="tel:0120783409" title="電話する" class="button hollow expanded"><img src="//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/header-tel.jpg" alt=""></a></p>
 			<p class="topheader--button"><a href="https://www.law-yamashita.com/contact" class="button hollow expanded" title="メールで相談予約" target="_blank"><?php NID_SVG::icon( 'mail', array( 'class' => 'button--icon' ), 'メール' ); ?>メールで相談予約</a></p>
-			<p class="topheader--button button-group expanded stacked-for-small"><a href="https://www.law-yamashita.com/lp/3674" class="button hollow expanded" title="東広島支部について">東広島支部について</a><a href="https://www.law-yamashita.com/lp/4137" class="button hollow expanded" title="呉支部について">呉支部について</a></p>
-			<p class="topheader--button"><a href="https://www.law-yamashita.com/seminar" class="button hollow expanded" title="セミナーのご案内"><?php NID_SVG::icon( 'megaphone', array( 'class' => 'button--icon' ), 'セミナー案内' ); ?>セミナーのご案内</a></p>
+			<p class="topheader--button button-group expanded stacked-for-small"><a href="https://www.law-yamashita.com/lp/3674" class="button hollow expanded" title="東広島支部について" target="_blank">東広島支部について</a><a href="https://www.law-yamashita.com/lp/4137" class="button hollow expanded" title="呉支部について" target="_blank">呉支部について</a></p>
+			<p class="topheader--button"><a href="<?php echo home_url(), '/seminar'; ?>" class="button hollow expanded" title="セミナーのご案内"><?php NID_SVG::icon( 'megaphone', array( 'class' => 'button--icon' ), 'セミナー案内' ); ?>セミナーのご案内</a></p>
 		</div>
 	</div>
 </section>
