@@ -7,6 +7,7 @@ TARGETS=(
 	"2017-10-10.sql"
 	"sql/2017-11-01.sql"
 	"assets/img/everest.jpg"
+	"sql/2017-11-06.sql"
 )
 
 # 半角スペースでjoinする
