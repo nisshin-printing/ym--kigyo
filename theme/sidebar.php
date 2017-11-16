@@ -1,3 +1,6 @@
+<?php
+	$news_pages = array( '5641', '5644', '5648' );
+?>
 <aside id="js--sidebar" class="sidebar">
 <button class="sidenav--trigger__wrap">
 	<a href="#" class="js--sidenav--button sidenav--trigger">
@@ -6,7 +9,7 @@
 		<span></span>
 	</a>
 </button>
-<?php if ( is_archive() || is_home() || is_front_page() ) : ?>
+<?php if ( is_archive() || is_home() || is_front_page() || is_single() || is_page( $news_pages ) ) : ?>
 <div class="sidebar--item">
 	<h5 class="sidebar--title">お知らせ</h5>
 	<ul class="menu vertical" role="menu">
@@ -21,7 +24,6 @@
 		}
 		echo '</ul>';
 		
-		$news_pages = array( '5641', '5644', '5648' );
 		foreach ( $news_pages as $page ) {
 			echo '<li class="menu--item"><a href="', get_category_link( $page ), '" class="menu--link">', get_the_title( $page ), '</a></li>';
 		}
