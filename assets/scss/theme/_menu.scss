@@ -1,4 +1,5 @@
 .menu--primary__wrap {
+		border-bottom: 1px solid $primary-color;
 		background-color: #FFF;
 		.is-dropdown-submenu {
 				background: lighten($primary-color, 30%);

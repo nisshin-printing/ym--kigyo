@@ -29,7 +29,7 @@ if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) ) {
 		</div>
 	</header>
 	<?php NID_Crumbs::crumbs(); ?>
-	<div class="row">
+	<div class="row contents--wrap">
 		<div class="column large-3 sidebar--wrap"><?php get_sidebar(); ?></div>
 		<div class="sidenav--overlay js--sidenav--button"></div>
 		<div class="column contents">
@@ -69,6 +69,11 @@ if ( is_post_type_archive( 'cases' ) || is_singular( 'cases' ) ) {
 					} else if ( is_page( 'consulting' ) ) {
 						$page_id = '4618';
 						include locate_template( './templates/page.php' );
+
+					} else if ( is_singular( 'dtdsh-lp' ) ) {
+						if ( is_single( 'komon' ) ) {
+							get_template_part( './templates/lp/komon' );
+						}
 
 					} else if ( is_page() || is_single() ) {
 						while ( have_posts() ) : the_post();

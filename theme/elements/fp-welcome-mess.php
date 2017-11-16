@@ -10,11 +10,12 @@
 			<div class="column small-12 medium-6 large-8">
 				<h2 class="title--border-bottom">代表あいさつ</h2>
 				<div class="message--paragraph">
-					<p>山下江法律事務所サイトへのご訪問ありがとうございます。<br>お悩みやお困りごとがありましたら，お気軽に当事務所にご連絡ください。</p>
-					<p>当事務所は，平成7年7月11日創立以来「親切な相談」「適切な解決」をモットーに業務に励んできました。<br>平成２９年１月には弁護士法人を設立し、広島本部のほか、<a href="https://www.law-yamashita.com/lp/3674" title="東広島支部" target="_blank">東広島支部</a>と<a href="https://www.law-yamashita.com/lp/4137" title="呉支部" target="_blank">呉支部</a>を開設しました。</p>
-					<p>トラブルに巻き込まれた場合，法律的にはどうなるのだろうというご質問に的確にお答えし，法律で保証された権利を依頼者様に寄り添いながら実現していきます。さらに，法律的には困難な場合でも，どのようにすれば依頼者様にとっての最善の道に向かうのかについて，依頼者様に寄り添い一緒に考え，闘います。</p>
-					<p>あなたは一人ではありません。<br>私たち弁護士・秘書があなたを全力で支えます。私たちはあなたの味方です。<br>一人で悩まず，まずは当事務所までご連絡ください。</p>
-					<p class="text-right"><a href="https://www.law-yamashita.com/members/ko-yamashita" class="button" title="山下江について" target="_blank">山下江について　></a></p>
+					<p>山下江及び当事務所の弁護士は、広島商工会議所、広島県中小企業家同友会、広島日経懇話会（日経新聞）、ロータリークラブ、ＮＰＯ法人広島経済活性化推進倶楽部などを通して、多くの企業家と交流してきました。</p>
+					<p>また、企業を巡る様々なトラブルの解決に当たってきました。
+					会社の経営上様々な法的問題が発生することは避けられません。問題が大きくなる前に、できれば、問題が発生する前に（予防法務）、弁護士に相談することをお勧めします。</p>
+					<p>当事務所は、広島県最大という大規模事務所の利点を生かし、迅速にかつ複数人の体制にて問題に対処できると思います。</p>
+					<p>また、日頃からの予防法務のためにも顧問契約をお勧めします。</p>
+					<p class="text-right"><a href="https://www.law-yamashita.com/members/ko-yamashita" class="button" title="山下江について" target="_blank">山下江について　><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
 				</div>
 			</div>
 		</div>
@@ -35,7 +36,7 @@
 					<p>企業法務の分野では，起こった紛争の解決も大事ですが，それにも増して紛争が起こらないようにすること（予防法務）も重要になってきます。</p>
 					<p>当事務所では，契約書類の事前チェックなど，予防法務に関する業務も行っておりますので，お気軽にご相談ください。当事務所と顧問契約を締結していただければ，ちょっとしたことでも，いつでも気軽にご相談いただけますので，是非ご活用ください。</p>
 					<p>質の高い法的サービスを皆様に提供できるように取り組んでまいりますので，今後ともよろしくお願いいたします。</p>
-					<p class="text-right"><a href="https://www.law-yamashita.com/members/shin-tanaka" class="button" title="副代表の田中伸について" target="_blank">田中伸について　></a></p>
+					<p class="text-right"><a href="https://www.law-yamashita.com/members/shin-tanaka" class="button" title="副代表の田中伸について" target="_blank">田中伸について　><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 <?php
 //========================  Define ========================================================================//
-define( 'DTDSH_THEME_VERSION', '0.3' );
+define( 'DTDSH_THEME_VERSION', '1.0.0' );
 
 /* =========================================
 		ACTION HOOKS & FILTERS
@@ -115,7 +115,7 @@ if ( ! function_exists( 'theme_setup' ) ) {
 if ( ! function_exists( 'theme_styles' ) ) {
 	function theme_styles() {
 		$theme_dir = get_stylesheet_directory_uri();
-		wp_enqueue_style( 'main', "//www.law-yamashita.com/wp-content/themes/ym-home/assets/css/main.css", array(), '', 'all' );
+		wp_enqueue_style( 'main', "//www.law-yamashita.com/wp-content/themes/ym-home/assets/css/main.css", array(), null, 'all' );
 		wp_enqueue_style( 'theme', "$theme_dir/assets/css/theme.css", array( 'main' ), DTDSH_THEME_VERSION, 'all' );
 	}
 }

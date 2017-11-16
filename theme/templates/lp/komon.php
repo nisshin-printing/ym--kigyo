@@ -1,7 +1,7 @@
 <header class="header--lp header--lp__komon text-center">
 	<div class="row">
 		<div class="column">
-			<h1 class="title--lp__komon">顧問弁護士を置くことは<br>大きなトラブルを防ぐ<br><span>有効な予防策</span></h1>
+			<h1 class="header--title__lp">顧問弁護士を置くことは<br>大きなトラブルを防ぐ<br><span>有効な予防策</span></h1>
 		</div>
 	</div>
 </header>
