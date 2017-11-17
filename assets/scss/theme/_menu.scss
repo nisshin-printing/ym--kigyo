@@ -5,3 +5,7 @@
 				background: lighten($primary-color, 30%);
 		}
 }
+
+.sidebar--item .menu.nested.menu__wrap--level-2 {
+		display: none;
+}

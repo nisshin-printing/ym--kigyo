@@ -3,12 +3,12 @@
 @import './config/foundation';
 @import './config/images';
 @import './pageheader';
-@import './cta--kigyo-regal';
 
 /**
- * Theme
- */
+* Theme
+*/
 
+@import './theme/cta--kigyo-regal';
 @import './theme/about';
 @import './theme/foundation';
 @import './theme/free-call';

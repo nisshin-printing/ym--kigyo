@@ -55,6 +55,7 @@
 		NID_Menu::nav_menu( 'primary', array(
 			'container_class' => 'menu--side__wrap',
 			'menu_direction' => 'vertical',
+			'show_level_class' => true
 		) );
 	?>
 </div>

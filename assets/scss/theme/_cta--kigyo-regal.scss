@@ -8,10 +8,10 @@
 .cta--lp_title {
 		svg,
 		img {
-				width: 2em;
-				height: 2em;
+				width: 4em;
+				height: 4em;
 				display: inline-block;
-				vertical-align: bottom;
+				vertical-align: middle;
 				margin-right: 1rem;
 		}
 		text-align: center;
@@ -20,7 +20,7 @@
 		&::after {
 				content: '';
 				position: absolute;
-				bottom: .75em;
+				bottom: 2em;
 				left: 50%;
 				transform: translateX(-50%);
 				width: 2em;
