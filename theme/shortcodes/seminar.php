@@ -161,6 +161,26 @@ function show_seminar_lists() {
 			'resume'    => '19-resume.pdf',
 			'audio'     => '19-audio.mp3',
 		),
+		array(
+			'num'       => '20',
+			'time'      => '2017年7月27日',
+			'title'     => '「弁護士が解説 下請法のポイント」<br>～「下請いじめ」をしない、させないために～',
+			'lawyer'    => '田中伸',
+			'lawyer_id' => '549',
+			'resume'    => '20-resume.pdf',
+			'document'  => '21-document.pdf',
+			'audio'     => '20-audio.mp3',
+		),
+		array(
+			'num'       => '21',
+			'time'      => '2017年11月16日',
+			'title'     => '「未払残業代請求に対する事前予防と事後対応」',
+			'lawyer'    => '稲垣洋之',
+			'lawyer_id' => '551',
+			'resume'    => '21-resume.pdf',
+			'document'  => '21-document.pdf',
+			'audio'     => '21-audio.mp3',
+		),
 	);
 	$seminar_array = array_reverse( $seminar_array );
 	$html = '';
