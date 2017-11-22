@@ -1,0 +1,16 @@
+.post--interview {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		border: 1px solid $light-gray;
+		&:nth-of-type(2n) {
+				background-color: $light-gray;
+				border: 1px solid transparent;
+		}
+		.post--title {
+				margin-top: auto !important;
+				margin-bottom: auto !important;
+		}
+		.post--content {
+				margin-top: 2rem;
+		}
+}

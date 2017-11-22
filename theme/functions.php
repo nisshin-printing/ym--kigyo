@@ -103,7 +103,7 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		/**
 		 * Short Codes
 		 */
-		include_once( "$theme_dir/shortcodes/init.php" );
+		// include_once( "$theme_dir/shortcodes/init.php" );
 	}
 }
 /**

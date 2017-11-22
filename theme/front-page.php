@@ -81,7 +81,7 @@
 <!--
 
 			<div class="contents--section">
-				<h2 class="contents--title"><a href="">Q&A<span class="badge">></span></a></h2>
+				<h2><a href="">Q&A<span class="badge">></span></a></h2>
 				<div class="row">
 					<dl class="qa column small-12 medium-6">
 						<dt class="qa--icon"><a href="">これはテストですか？</a></dt>
@@ -103,7 +103,7 @@
 			</div>
 
 			<section class="contents--section">
-				<h2 class="contents--title">○○サイトに初めて訪れた方へオススメしたい記事</h2>
+				<h2>○○サイトに初めて訪れた方へオススメしたい記事</h2>
 				<div class="row small-up-1 medium-up-2">
 					<article class="article--loop column">
 						<figure class="article--loop_thumbnail text-center">
@@ -153,7 +153,7 @@
 				if ( $news->have_posts() ) :
 			?>
 			<div class="contents--section">
-				<h2 class="contents--title"><a href="<?php echo get_page_link( '5749' ); ?>">最新情報<span class="badge">></span></a></h2>
+				<h2><a href="<?php echo get_page_link( '5749' ); ?>">最新情報<span class="badge">></span></a></h2>
 				<?php
 					while ( $news->have_posts() ) : $news->the_post();
 				?>
@@ -207,7 +207,7 @@
 
 
 			<div class="contents--section">
-				<h2 class="contents--title"><a href="https://www.law-yamashita.com/column" target="_blank">事務所の最新情報<span class="badge">></span></a></h2>
+				<h2><a href="https://www.law-yamashita.com/column" target="_blank">事務所の最新情報<span class="badge">　></span></a></h2>
 				<?php
 					$url = 'https://www.law-yamashita.com/feed';
 					$url = sprintf( esc_html( "%s" ), $url );
@@ -242,7 +242,7 @@ EOM;
 					}
 					echo $output;
 				?>
-				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧</a></p>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧<br><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
 			</div>
 			
 		</div>

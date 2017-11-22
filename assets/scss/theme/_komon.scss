@@ -1,5 +1,23 @@
-$komon_id: '6';
-.postid-#{$komon_id} {}
+$komon_id: '5912';
+.postid-#{$komon_id} {
+		th {
+				text-align: center;
+		}
+		table {
+				tbody th {
+						width: 5.5rem;
+						border-right: 1px solid $light-gray;
+				}
+		}
+		tr th:nth-of-type(3) {
+				background-color: rgba(#39b44a, .25);
+				border: 1px solid #39b44a;
+		}
+		tr td:nth-of-type(2) {
+				background-color: rgba(#39b44a, .25);
+				border: 1px solid #39b44a;
+		}
+}
 
 .header--lp__komon {
 		background-image: url('#{$p_images}/lp/bg-header--komon.jpg');
@@ -20,4 +38,21 @@ $komon_id: '6';
 
 .nav--lp__komon {
 		color: #39b44a;
+}
+
+.komon--box {
+		box-shadow: 0 0 0 1px $light-gray, 0 0 0 5px rgba($primary-color, .25);
+		&__inner {
+				padding: 1rem;
+				@include breakpoint(medium) {
+						padding: 2rem;
+				}
+		}
+		h3 {
+				margin-top: 0 !important;
+		}
+		&__bg {
+				background: rgba(#4CA1AF, .5);
+				background: linear-gradient(45deg, rgba(#4CA1AF, .5), rgba(#C4E0E5, .25));
+		}
 }

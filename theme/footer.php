@@ -30,7 +30,8 @@
 
 					NID_Menu::nav_menu( 'ringo-footernav', array(
 						'container' => false,
-						'items_wrap' => '<ul class="menu vertical footer--nav column large-6 show-for-large">%3$s</ul>'
+						'items_wrap' => '<ul class="menu vertical footer--nav column large-6 show-for-large">%3$s</ul>',
+						'show_level_class' => true
 					) );
 				?>
 			</div>
