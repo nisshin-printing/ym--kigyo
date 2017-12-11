@@ -153,55 +153,18 @@
 				if ( $news->have_posts() ) :
 			?>
 			<div class="contents--section">
-				<h2><a href="<?php echo get_page_link( '5749' ); ?>">最新情報<span class="badge">></span></a></h2>
+				<h2><a href="<?php echo get_page_link( '5749' ); ?>">最新情報<span class="badge">　></span></a></h2>
 				<?php
 					while ( $news->have_posts() ) : $news->the_post();
 				?>
-				<article <?php post_class( 'post post--topic' ); ?> itemscope itemtype="http://schema.org/Article" itemref="author-prof">
-					<meta itemprop="description" content="<?php the_excerpt(); ?>">
-					<ul class="post--meta menu">
-						<li class="published" itemprop="datePublished dateCreated" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"></li>
-						<li class="updated" itemprop="dateModified" datetime="<?php echo get_the_modified_time( 'Y-m-d' ); ?>"></li>
-						<li class="author hide" itemprop="author copyrightHolder editor" itemscope itemtype="http://schema.org/Person"><span class="author" itemprop="name"><?php bloginfo( 'name' ); ?></span></li>
-					</ul>
-					<div class="row align-middle">
-						<?php
-							if ( has_post_thumbnail() ) :
-						?>
-						<div class="column small-4"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-						<div class="column small-8">
-						<?php
-							else :
-						?>
-							<div class="column small-12">
-						<?php
-							endif;
-						?>
-							<h3 itemprop="about headline" class="entry-title post--title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-									<span class="title--small title--block"><?php echo $job = ( get_post_meta ( $post->ID, 'subtitle', true ) ) ? get_post_meta ( $post->ID, 'subtitle', true )  : '' ?></span>
-								</a>
-							</h3>
-						</div>
-					</div>
-					<?php
-						$categories = get_the_category( $post->ID );
-					?>
-					<div class="post--label">
-					<?php
-						foreach ( $categories as $category ) :
-					?>
-						<a href="<?php echo get_category_link( $category->cat_ID ); ?>" class="label secondary"><?php echo $category->name; ?></a>
-					<?php
-							endforeach;
-					?>
-					</div>
-				</article>
+				<dl>
+					<dt><span class="label secondary"><?php the_modified_date( 'Y-m-d' ); ?></span>　<?php the_category( '　' ); ?></dt>
+					<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+				</dl>
 				<?php
 					endwhile;
 				?>
-				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧</a></p>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="<?php echo get_page_link( '5749' ); ?>" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>お知らせ一覧</a></p>
 			</div>
 				<?php endif; ?>
 

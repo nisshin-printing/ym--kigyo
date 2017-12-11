@@ -1,16 +1,19 @@
-.post--interview {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		border: 1px solid $light-gray;
-		&:nth-of-type(2n) {
-				background-color: $light-gray;
-				border: 1px solid transparent;
-		}
+.category-interview {
 		.post--title {
-				margin-top: auto !important;
-				margin-bottom: auto !important;
+				margin-top: 0 !important;
 		}
-		.post--content {
-				margin-top: 2rem;
+		th:only-child {
+				background-color: $primary-color;
+				color: #FFF;
+				border-bottom: double 1px #FFF;
+		}
+		tr:nth-of-type(n+2) th {
+				border-right: solid 1px #FFF;
+		}
+		td {
+				ul,
+				ol {
+						margin-bottom: 0;
+				}
 		}
 }
