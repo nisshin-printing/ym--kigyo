@@ -52,6 +52,7 @@
 	<div id="js--button-fixed" class="button--fixed"><a href="#top" title="<?php bloginfo( 'name' ); ?>" class="button--circle bg-lime"><?php NID_SVG::icon( 'arrow-up', array( 'class' => 'footer--social__icon' ), 'ページ上部へ' ); ?></a></div>
 </footer>
 <?php get_template_part( './elements/footer-menu' ); ?>
+<?php get_template_part( './elements/ajax-modal' ); ?>
 <script src="//www.law-yamashita.com/wp-content/themes/ym-home/assets/js/svgxuse.js" defer></script>
 <?php wp_footer(); ?>
 </body>

@@ -15,7 +15,7 @@
 					会社の経営上様々な法的問題が発生することは避けられません。問題が大きくなる前に、できれば、問題が発生する前に（予防法務）、弁護士に相談することをお勧めします。</p>
 					<p>当事務所は、広島県最大という大規模事務所の利点を生かし、迅速にかつ複数人の体制にて問題に対処できると思います。</p>
 					<p>また、日頃からの予防法務のためにも顧問契約をお勧めします。</p>
-					<p class="text-right"><a href="https://www.law-yamashita.com/members/ko-yamashita" class="button" title="山下江について" target="_blank">山下江について　><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
+					<p class="text-right"><a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/548" data-toggle="js--ajax-modal">山下江について　></a></p>
 				</div>
 			</div>
 		</div>
@@ -32,11 +32,11 @@
 				<h2 class="title--border-bottom">チームリーダーあいさつ</h2>
 				<div class="message--paragraph">
 					<p>山下江法律事務所には「企業法務チーム」があります。</p>
-					<p>チームのメンバーは，<a href="https://www.law-yamashita.com/members/shin-tanaka" title="副代表の田中伸について" target="_blank">リーダーの田中伸</a>を含めて，企業法務案件を比較的多く扱っている弁護士４名と秘書３名の総勢７名です。</p>
+					<p>チームのメンバーは，<a class="js--modal-button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/549" data-toggle="js--ajax-modal">リーダーの田中伸</a>を含めて，企業法務案件を比較的多く扱っている弁護士４名と秘書３名の総勢７名です。</p>
 					<p>企業法務の分野では，起こった紛争の解決も大事ですが，それにも増して紛争が起こらないようにすること（予防法務）も重要になってきます。</p>
 					<p>当事務所では，契約書類の事前チェックなど，予防法務に関する業務も行っておりますので，お気軽にご相談ください。当事務所と顧問契約を締結していただければ，ちょっとしたことでも，いつでも気軽にご相談いただけますので，是非ご活用ください。</p>
 					<p>質の高い法的サービスを皆様に提供できるように取り組んでまいりますので，今後ともよろしくお願いいたします。</p>
-					<p class="text-right"><a href="https://www.law-yamashita.com/members/shin-tanaka" class="button" title="副代表の田中伸について" target="_blank">田中伸について　><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
+					<p class="text-right"><a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/549" data-toggle="js--ajax-modal">田中伸について　></a></p>
 				</div>
 			</div>
 		</div>

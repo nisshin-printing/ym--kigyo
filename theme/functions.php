@@ -1,6 +1,6 @@
 <?php
 //========================  Define ========================================================================//
-define( 'DTDSH_THEME_VERSION', '1.0.2' );
+define( 'DTDSH_THEME_VERSION', '1.0.3' );
 
 /* =========================================
 		ACTION HOOKS & FILTERS
@@ -164,3 +164,32 @@ function theme_favicon() {
 	echo "<link rel=\"SHORTCUT ICON\" href=\"//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/favicon.ico\">",
 		"<link rel=\"apple-touch-icon\" href=\"//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/favicon-144.png\">";
 }
+
+/**
+ * リクエスト送信先パス
+ */
+function add_ajaxurl() {
+	echo '<script>var ajaxurl = "', admin_url( 'admin-ajax.php' ), '";</script>';
+}
+add_action( 'wp_footer', 'add_ajaxurl', 1 );
+
+/**
+ * Ajaxで呼び出すPHP関数の作成
+ */
+function modal_ajax() {
+	if( isset( $_POST['url'] ) && preg_match( "/^https/", $_POST['url'] ) ) {
+		$json = file_get_contents( $_POST['url'] );
+		$arr_json = json_decode( $json, true );
+
+		echo '<div class="contents">';
+		echo '<h2 style="margin-top:0">', $arr_json['title']['rendered'], '</h2>';
+		echo $arr_json['content']['rendered'];
+		echo '</div>';
+		die();
+	} else {
+		echo '読み込みエラーです。';
+		die();
+	}
+}
+add_action( 'wp_ajax_modal_ajax', 'modal_ajax' );
+add_action( 'wp_ajax_nopriv_modal_ajax', 'modal_ajax' );
