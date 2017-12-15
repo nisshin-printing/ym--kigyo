@@ -1,6 +1,6 @@
 <?php
 //========================  Define ========================================================================//
-define( 'DTDSH_THEME_VERSION', '1.0.3' );
+define( 'DTDSH_THEME_VERSION', '1.0.4' );
 
 /* =========================================
 		ACTION HOOKS & FILTERS
@@ -177,7 +177,7 @@ add_action( 'wp_footer', 'add_ajaxurl', 1 );
  * Ajaxで呼び出すPHP関数の作成
  */
 function modal_ajax() {
-	if( isset( $_POST['url'] ) && preg_match( "/^https/", $_POST['url'] ) ) {
+	if( isset( $_POST['url'] ) && preg_match( "/^https?/", $_POST['url'] ) ) {
 		$json = file_get_contents( $_POST['url'] );
 		$arr_json = json_decode( $json, true );
 
