@@ -27,7 +27,7 @@
 				<div class="row small-up-1 medium-up-2">
 					
 					<?php
-						include( get_template_directory() . '/config/service.php' );
+						include( get_template_directory() . '/config/service--draft.php' );
 						for ( $i = 0; $i < 4; $i++ ) :
 					?>
 					<article class="article--category column">
@@ -164,7 +164,7 @@
 				<?php
 					endwhile;
 				?>
-				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="<?php echo get_page_link( '5749' ); ?>" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>お知らせ一覧</a></p>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="<?php echo get_page_link( '5749' ); ?>" class="button large"><?php NID_SVG::icon( 'list', array() ); ?>お知らせ一覧</a></p>
 			</div>
 				<?php endif; ?>
 

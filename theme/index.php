@@ -22,13 +22,9 @@ if ( is_archive() || is_single() || is_home() ) {
 		<div class="column contents">
 			<?php
 				if ( have_posts() ) {
-					if ( is_archive() || is_home() ) {
-						while ( have_posts() ) : the_post();
-							get_template_part( './templates/content' );
-						endwhile;
-
-					} else if ( is_page( 'service' ) ) {
+					if ( is_page( 'service' ) ) {
 						get_template_part( 'templates/page--service' );
+
 
 					} else if ( is_page( 'cases' ) || is_page( 'voice' ) ) {
 						$is_type = ( is_page( 'cases' ) ) ? 'cases' : 'voice';
@@ -53,7 +49,7 @@ if ( is_archive() || is_single() || is_home() ) {
 					} else if ( is_page( 'kairo' ) ) {
 						get_template_part( './templates/page--kairo' );
 
-					} else if ( is_page( 'consulting' ) ) {
+					} else if ( is_page( 'succession' ) ) {
 						$page_id = '4618';
 						include locate_template( './templates/page.php' );
 
@@ -66,9 +62,9 @@ if ( is_archive() || is_single() || is_home() ) {
 						while ( have_posts() ) : the_post();
 							the_content();
 						endwhile;
-					}
 
-					else if ( is_page() || is_single() ) {
+
+					} else {
 						while ( have_posts() ) : the_post();
 							get_template_part( './templates/content' );
 						endwhile;

@@ -1,7 +1,7 @@
 <div class="row small-up-1 medium-up-2">
 	
 	<?php
-		include( get_template_directory() . '/config/service.php' );
+		include( get_template_directory() . '/config/service--draft.php' );
 		foreach ( $service as $item ) :
 	?>
 	<article class="article--category column">
@@ -12,7 +12,7 @@
 		<div class="article--category_content">
 			<ol>
 				<?php
-					foreach ( $item['children'] as $child ) {
+					if ( $item['children'] ) : foreach ( $item['children'] as $child ) {
 						if ( ! is_array( $child ) ) {
 							echo '<li><a href="', get_page_link( $child ), '">', get_the_title( $child ), '</a></li>';
 						} else {
@@ -39,6 +39,7 @@
 							echo '</ul>';
 						}
 					}
+					endif;
 				?>
 			</ol>
 			<p class="text-center contents--section_button"><a href="<?php echo get_page_link( $item['id'] ); ?>" class="button secondary"><?php NID_SVG::icon( 'list', array() ); ?>詳しく見る</a></p>
