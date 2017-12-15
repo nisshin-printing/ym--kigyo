@@ -1,7 +1,7 @@
 <div class="cta--lp_wrap">
 	<div class="row align-middle">
 		<div class="column small-12 large-6">
-			<h2 class="cta--lp_title"><img src="<?php echo get_template_directory_uri(), '/assets/img/shield.png?ver=', DTDSH_THEME_VERSION; ?>" alt="顧問契約のアイコン">顧問契約のススメ</h2>
+			<h2 id="front--komon" class="cta--lp_title"><img src="<?php echo get_template_directory_uri(), '/assets/img/shield.png?ver=', DTDSH_THEME_VERSION; ?>" alt="顧問契約のアイコン">顧問契約のススメ</h2>
 			<div class="cta--lp_desc">
 				<h3 class="cta--lp__sub-title">顧問契約 ５つのメリット</h3>
 				<ol>

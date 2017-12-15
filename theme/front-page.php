@@ -23,7 +23,7 @@
 		<div class="sidenav--overlay js--sidenav--button"></div>
 		<div class="column small-12 large-8 contents --mt0 --pt0">
 			<section class="contents--section contents--section__service">
-				<h2>取扱業務ピックアップ</h2>
+				<h2 id="front--service">取扱業務ピックアップ</h2>
 				<div class="row small-up-1 medium-up-2">
 					
 					<?php
