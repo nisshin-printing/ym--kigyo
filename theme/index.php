@@ -46,6 +46,10 @@ if ( is_archive() || is_single() || is_home() ) {
 						$page_id = '3599';
 						include locate_template( './templates/page.php' );
 
+					} else if ( is_page( 'keizai-report' ) ) {
+						$page_id = '5501';
+						include locate_template( './templates/page.php' );
+
 					} else if ( is_page( 'kairo' ) ) {
 						get_template_part( './templates/page--kairo' );
 

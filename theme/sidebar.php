@@ -25,7 +25,7 @@
 		echo '</ul>';
 		
 		foreach ( $news_pages as $page ) {
-			echo '<li class="menu--item"><a href="', get_category_link( $page ), '" class="menu--link">', get_the_title( $page ), '</a></li>';
+			echo '<li class="menu--item"><a href="', get_page_link( $page ), '" class="menu--link">', get_the_title( $page ), '</a></li>';
 		}
 	?>
 	</ul>
