@@ -24,19 +24,20 @@
 		<div class="row align-middle">
 			<div class="column small-12 medium-6 large-4 message--image">
 				<picture>
-					<source media="(max-width: 639px)" srcset="https://i0.wp.com/www.law-yamashita.com/wp-content/uploads/2015/06/shin-tanaka.png?fit=210%2C210&ssl=1" sizes="210px">
-					<img class="thumbnail" src="https://i0.wp.com/www.law-yamashita.com/wp-content/uploads/2016/11/sub-message.jpg?zoom=0.800000011920929&fit=400%2C600&ssl=1" width="281" height="375" alt="副代表・広島本部長・弁護士の田中伸">
+					<source media="(max-width: 639px)" srcset="https://i1.wp.com/www.law-yamashita.com/wp-content/uploads/2015/11/kasahara-1.jpg?w=210&ssl=1" sizes="210px">
+					<img class="thumbnail" src="https://www.law-yamashita.com/wp-content/uploads/2018/01/50565c917104fece70613feb2ca6b380-e1515485937107.jpg" width="250" height="375" alt="副代表・広島本部長・弁護士の田中伸">
 				</picture>
 			</div>
 			<div class="column small-12 medium-6 large-8">
 				<h2 class="title--border-bottom">チームリーダーあいさつ</h2>
 				<div class="message--paragraph">
 					<p>山下江法律事務所には「企業法務チーム」があります。</p>
-					<p>チームのメンバーは，<a class="js--modal-button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/549" data-toggle="js--ajax-modal">リーダーの田中伸</a>を含めて，企業法務案件を比較的多く扱っている弁護士４名と秘書３名の総勢７名です。</p>
-					<p>企業法務の分野では，起こった紛争の解決も大事ですが，それにも増して紛争が起こらないようにすること（予防法務）も重要になってきます。</p>
-					<p>当事務所では，契約書類の事前チェックなど，予防法務に関する業務も行っておりますので，お気軽にご相談ください。当事務所と顧問契約を締結していただければ，ちょっとしたことでも，いつでも気軽にご相談いただけますので，是非ご活用ください。</p>
-					<p>質の高い法的サービスを皆様に提供できるように取り組んでまいりますので，今後ともよろしくお願いいたします。</p>
-					<p class="text-right"><a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/549" data-toggle="js--ajax-modal">田中伸について　></a></p>
+					<p>企業の皆様、「弁護士に相談するとできないことばかり増える・・・。」と思っていませんか？確かに、そうかもしれません。可能な限り、企業の皆様のご要望を実現可能な方法を考えますが、それでも、できないことを増やしてしまうことはあります。</p>
+					<p>しかし、弁護士に相談せず法的問題に気付かないまま企業活動を進めてしまえば、どうなるでしょうか？法的問題に気付いたときには手遅れで、莫大な損害を避けられないかもしれません。</p>
+					<p>「これまで法的問題は起こっていないから大丈夫♪」と思っていませんか？昨日まで大丈夫だったとしても、今日どうなるかは分かりません。</p>
+					<p>「でも、日程調整して法律事務所に行って弁護士に相談するのは時間がかかる・・・。」と思っていませんか？顧問契約を結べば、ちょっとしたことでも電話やメールで弁護士に相談可能です。</p>
+					<p>山下江法律事務所では、弁護士４名、秘書５名で企業チームを構成し、スキルアップに励み、予防法務、債権回収、労働問題等、幅広く企業法務に取り組んでいます。是非、ご相談下さい。</p>
+					<p class="text-right"><a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/553" data-toggle="js--ajax-modal">笠原輔について　></a></p>
 				</div>
 			</div>
 		</div>
