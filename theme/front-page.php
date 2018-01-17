@@ -170,7 +170,7 @@
 
 
 			<div class="contents--section">
-				<h2><a href="https://www.law-yamashita.com/column" target="_blank">事務所の最新情報<span class="badge">　></span></a></h2>
+				<h2><a href="https://www.law-yamashita.com/topics" target="_blank">事務所の最新情報<span class="badge">　></span></a></h2>
 				<?php
 					$url = 'https://www.law-yamashita.com/feed';
 					$url = sprintf( esc_html( "%s" ), $url );
@@ -205,7 +205,7 @@ EOM;
 					}
 					echo $output;
 				?>
-				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/column" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧<br><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
+				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="https://www.law-yamashita.com/topics" class="button large" target="_blank"><?php NID_SVG::icon( 'list', array() ); ?>メインサイトのお知らせ一覧<br><br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>
 			</div>
 			
 		</div>
