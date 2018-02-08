@@ -45,7 +45,7 @@
 			<p class="footer--title -no-border"><?php NID_SVG::icon( 'fax', array( 'class' => 'footer--title-icon' ) ); ?>FAX番号</p>
 			<p>082-223-2652</p>
 			<p class="footer--title -no-border"><?php NID_SVG::icon( 'mail', array( 'class' => 'footer--title-icon' ) ); ?>メール</p>
-			<p><a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>">info@law-yamashita.com</a></p>
+			<p><a href="https://www.law-yamashita.com/contact">info@law-yamashita.com</a></p>
 		</div>
 	</div>
 	<p class="footer--copy">© <span itemprop="copyrightYear"><?php echo date( 'Y' ); ?></span> <?php bloginfo( 'name' ); ?></p>
