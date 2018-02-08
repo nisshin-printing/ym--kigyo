@@ -44,9 +44,9 @@
 			</div>
 		</div>
 		<div class="column small-12 medium-6 copy--top text-center">
-			<h1 class="copy--title">探しているのは、<br>「頼れる」<ruby><rb>弁護士</rb><rp><rt>みかた</rt></rp></ruby>。</h1>
+			<h1 class="copy--title">迅速な経営判断と事業の発展のため、<br>探しているのは頼れる<ruby><rb>弁護士</rb><rp><rt>みかた</rt></rp></ruby>。</h1>
 			<div class="copy--desc">
-				<p>相談件数12,000件以上。<small>※</small><br>選ぶなら広島最大級。</p>
+				<p>相談件数12,000件以上<small>※　</small>選ぶなら広島最大級。</p>
 			<small>※　平成27年12月時点</small>
 			</div>
 			<p class="topheader--button"><a href="tel:0120783409" title="電話する" class="button hollow expanded"><img src="//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/header-tel.jpg" alt=""></a></p>

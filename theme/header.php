@@ -8,8 +8,13 @@
 <!doctype html>
 <html lang="ja" dir="ltr">
 <head>
-	<?php // Google Tag Manager ?>
-	<?php // End Google Tag Manager ?>
+<?php // Google Tag Manager ?>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MM3VKH');</script>
+<?php // End Google Tag Manager ?>
 
 
 	
@@ -33,6 +38,8 @@
 <?php // <body> closes in footer.php ?>
 
 <?php // Google Tag Manager (noscript) ?>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM3VKH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php // End Google Tag Manager (noscript) ?>
 
 <?php // common header content goes here ?>
@@ -46,8 +53,8 @@
 			</a>
 		</button>
 		<div class="column small-10 large-6">
+			<p class="top-bar--desc">企業法務に強い顧問弁護士なら広島最大級の</p>
 			<p class="top-bar--title"><a href="<?php echo home_url(); ?>"><img src="//www.law-yamashita.com/wp-content/uploads/2016/04/title-logo-1.png" alt="広島最大級の弁護士事務所、山下江法律事務所のロゴ"></a></p>
-			<p class="top-bar--desc">広島最大級の弁護士事務所へご相談ください。</p>
 		</div>
 		<div class="top-bar--button column large-6 show-for-large">
 			<p class="free-call"><a href="tel:0120783409"><?php NID_SVG::icon( 'phone', array( 'class' => 'free-call--icon', '電話する' ) ); ?>0120-7834-09</a></p>

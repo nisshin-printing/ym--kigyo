@@ -3,11 +3,14 @@
 		background: linear-gradient(to right, #606c88, #3f4c6b);
 		.copy--title {
 				color: #FFF;
-				font-size: 2rem;
+				font-size: 1.5rem;
 		}
 		.copy--desc {
-				color: #FFF;
+				color: $light-gray;
 				margin: 1em 0;
+				p {
+						margin-bottom: 0;
+				}
 		}
 		.button.hollow {
 				border-color: $primary-color;
