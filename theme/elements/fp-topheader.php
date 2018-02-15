@@ -77,8 +77,7 @@
 					<a href="#front--komon" class="button hollow expanded" title="顧問弁護士契約">顧問弁護士契約</a>
 				</p>
 				<p class="topheader--button">
-					<a data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/pages/3599" class="button hollow expanded js--modal-button"
-					    title="セミナーのご案内" data-toggle="js--ajax-modal">
+					<a href="<?php echo home_url(), '/seminar'; ?>" class="button hollow expanded" title="セミナーのご案内">
 						<?php NID_SVG::icon( 'megaphone', array( 'class' => 'button--icon' ), 'セミナー案内' ); ?>セミナーのご案内</a>
 				</p>
 			</div>
