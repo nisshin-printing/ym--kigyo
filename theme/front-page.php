@@ -145,7 +145,6 @@
 			<?php
 				$args = array(
 					'order' => 'DESC',
-					'orderby' => 'modified',
 					'posts_per_page' => 4,
 					'post_status'    => 'publish'
 				);

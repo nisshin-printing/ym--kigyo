@@ -181,9 +181,13 @@ function modal_ajax() {
 		$json = file_get_contents( $_POST['url'] );
 		$arr_json = json_decode( $json, true );
 
+		$content = $arr_json['content']['rendered'];
+		$content = str_replace( 'class="accordion-item"', 'class="accordion-item is-active"', $content );
+		$content = str_replace( 'class="accordion-content"', 'class="accordion-content" style="display:block"', $content );
+
 		echo '<div class="contents">';
 		echo '<h2 style="margin-top:0">', $arr_json['title']['rendered'], '</h2>';
-		echo $arr_json['content']['rendered'];
+		echo $content;
 		echo '</div>';
 		die();
 	} else {
