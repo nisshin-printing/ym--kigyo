@@ -37,18 +37,9 @@
 	<p class="free-call--hours">平日9時～18時<br>土曜10時～17時</p>
 	<p class="free-call--button"><a href="https://www.law-yamashita.com/contact" class="button large">お問い合わせ</a></p>
 </div>
-<?php /*
-<div class="sidebar--item sidebar--banner">
-	<nav>
-		<ul class="menu vertical">
-			<li><img src="//www.law-yamashita.com/wp-content/themes/law-yamashita/assets/img/front-page/sites_jiko.png" alt="テスト用の画像"></li>
-			<li><img src="//www.law-yamashita.com/wp-content/themes/law-yamashita/assets/img/front-page/sites_jiko.png" alt="テスト用の画像"></li>
-			<li><img src="//www.law-yamashita.com/wp-content/themes/law-yamashita/assets/img/front-page/sites_jiko.png" alt="テスト用の画像"></li>
-			<li><img src="//www.law-yamashita.com/wp-content/themes/law-yamashita/assets/img/front-page/sites_jiko.png" alt="テスト用の画像"></li>
-		</ul>
-	</nav>
-</div>
-*/ ?>
+
+<p><a href="<?php echo get_category_link( '312' ); ?>"><img src="<?php echo get_template_directory_uri(), '/assets/img/sidebar--merumaga.png'; ?>" alt="広島最大級の山下江法律事務所のニュースレター「KAIRO for Business」がメールマガジンになりました。" style="max-width:none;width:100%;border:1px solid #002060"></a></p>
+
 <div class="sidebar--item">
 <h5 class="sidebar--title">メインメニュー</h5>
 	<?php

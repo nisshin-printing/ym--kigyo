@@ -69,9 +69,22 @@ if ( is_archive() || is_single() || is_home() ) {
 
 
 					} else {
+						if ( is_category( 'backnumber' ) ) {
+							echo '<p class="text-center"><img src="', get_template_directory_uri(), '/assets/img/merumaga.png" alt="年3回発行していた「KAIRO for Business」がメルマガになりました。毎月第2水曜配信。企業法務に関する情報が紙面版より早く届きます。"></p><p><a href="#form" class="button">購読はコチラから</a></p>';
+						}
 						while ( have_posts() ) : the_post();
 							get_template_part( './templates/content' );
 						endwhile;
+
+						if ( is_category( 'backnumber' ) || in_category( 'backnumber' ) ) {
+							echo '<h2 id="form">メールマガジン購読</h2>';
+
+							if ( in_category( 'backnumber' ) ) {
+								echo '<p class="text-center"><img src="', get_template_directory_uri(), '/assets/img/merumaga.png" alt="年3回発行していた「KAIRO for Business」がメルマガになりました。毎月第2水曜配信。企業法務に関する情報が紙面版より早く届きます。"></p>';
+							}
+
+							echo do_shortcode( '[contact-form-7 id="1165" title="メールマガジン購読"]' );
+						}
 					}
 
 				} else {

@@ -46,8 +46,8 @@
 		<div class="column small-12 medium-6 copy--top text-center">
 			<h1 class="copy--title">迅速な経営判断と事業の発展のため、<br>探しているのは頼れる<ruby><rb>弁護士</rb><rp><rt>みかた</rt></rp></ruby>。</h1>
 			<div class="copy--desc">
-				<p>相談件数12,000件以上<small>※　</small>選ぶなら広島最大級。</p>
-			<small>※　平成27年12月時点</small>
+				<p>相談件数17,000件以上<small>※　</small>選ぶなら広島最大級。</p>
+			<small>※　平成29年12月時点</small>
 			</div>
 			<p class="topheader--button"><a href="tel:0120783409" title="電話する" class="button hollow expanded"><img src="//www.law-yamashita.com/wp-content/themes/ym-home/assets/img/header-tel.jpg" alt=""></a></p>
 			<p class="topheader--button"><a href="https://www.law-yamashita.com/contact" class="button hollow expanded" title="メールで相談予約" target="_blank"><?php NID_SVG::icon( 'mail', array( 'class' => 'button--icon' ), 'メール' ); ?>メールで相談予約</a></p>

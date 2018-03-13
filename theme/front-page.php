@@ -78,69 +78,10 @@
 				<p class="text-center contents--section_button" style="margin-top: 2rem"><a href="<?php echo get_page_link( '5481' ); ?>" class="button large"><?php NID_SVG::icon( 'list', array() ); ?>取扱業務の一覧を見る</a></p>
 			</section>
 
-<!--
 
-			<div class="contents--section">
-				<h2><a href="">Q&A<span class="badge">></span></a></h2>
-				<div class="row">
-					<dl class="qa column small-12 medium-6">
-						<dt class="qa--icon"><a href="">これはテストですか？</a></dt>
-						<dd class="qa--icon">これはテストです。<p class="qa--more"><a href=""><span>></span>詳しく見る</a></p></dd>
-					</dl>
-					<dl class="qa column small-12 medium-6">
-						<dt class="qa--icon"><a href="">これは長文質問のテストですか？これは長文質問のテストですか？</a></dt>
-						<dd class="qa--icon">これは長文質問のテストです。<p class="qa--more"><a href=""><span>></span>詳しく見る</a></p></dd>
-					</dl>
-					<dl class="qa column small-12 medium-6">
-						<dt class="qa--icon"><a href="">これは長文質問のテストですか？これは長文質問のテストですか？これは長文質問のテストですか？これは長文質問のテストですか？</a></dt>
-						<dd class="qa--icon">これは長文質問のテストです。これは長文質問のテストです。これは長文質問のテストです。<p class="qa--more"><a href=""><span>></span>詳しく見る</a></p></dd>
-					</dl>
-					<dl class="qa column small-12 medium-6">
-						<dt class="qa--icon"><a href="">これはテストですか？</a></dt>
-						<dd class="qa--icon">これはテストです。<p class="qa--more"><a href=""><span>></span>詳しく見る</a></p></dd>
-					</dl>
-				</div>
-			</div>
+			<?php get_template_part( './elements/fp--access' ); ?>
 
-			<section class="contents--section">
-				<h2>○○サイトに初めて訪れた方へオススメしたい記事</h2>
-				<div class="row small-up-1 medium-up-2">
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<h3 class="article--loop_title"><a href="">これはテストです。</a></h3>
-						</header>
-					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<h3 class="article--loop_title"><a href="">これは長文タイトルのテストです。これは長文タイトルのテストです。</a></h3>
-						</header>
-					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<h3 class="article--loop_title"><a href="">これは長文タイトルのテストです。これは長文タイトルのテストです。これは長文タイトルのテストです。これは長文タイトルのテストです。</a></h3>
-						</header>
-					</article>
-					<article class="article--loop column">
-						<figure class="article--loop_thumbnail text-center">
-							<a href="" rel="nofollow"><img src="//placehold.jp/400x250.png" alt=""></a>
-						</figure>
-						<header class="article--loop_header">
-							<h3 class="article--loop_title"><a href="">これはテストです。</a></h3>
-						</header>
-					</article>
-				</div>
-			</section>
 
--->
 
 			<?php
 				$args = array(
@@ -157,7 +98,7 @@
 					while ( $news->have_posts() ) : $news->the_post();
 				?>
 				<dl>
-					<dt><span class="label secondary"><?php the_modified_date( 'Y-m-d' ); ?></span>　<?php the_category( '　' ); ?></dt>
+					<dt><span class="label secondary"><?php the_time( 'Y-m-d' ); ?></span>　<?php the_category( '　' ); ?></dt>
 					<dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
 				</dl>
 				<?php
