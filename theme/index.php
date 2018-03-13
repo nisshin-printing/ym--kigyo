@@ -7,20 +7,24 @@ if ( is_archive() || is_single() || is_home() ) {
 
 	get_header();
 ?>
-<main>
-	<header class="pageheader">
-		<div class="row">
-			<div class="column">
-				<h1 class="pageheader--title"><?php echo $title; ?></h1>
+	<main>
+		<header class="pageheader">
+			<div class="row">
+				<div class="column">
+					<h1 class="pageheader--title">
+						<?php echo $title; ?>
+					</h1>
+				</div>
 			</div>
-		</div>
-	</header>
-	<?php NID_Crumbs::crumbs(); ?>
-	<div class="row contents--wrap">
-		<div class="column large-3 sidebar--wrap"><?php get_sidebar(); ?></div>
-		<div class="sidenav--overlay js--sidenav--button"></div>
-		<div class="column contents">
-			<?php
+		</header>
+		<?php NID_Crumbs::crumbs(); ?>
+		<div class="row contents--wrap">
+			<div class="column large-3 sidebar--wrap">
+				<?php get_sidebar(); ?>
+			</div>
+			<div class="sidenav--overlay js--sidenav--button"></div>
+			<div class="column contents">
+				<?php
 				if ( have_posts() ) {
 					if ( is_page( 'service' ) ) {
 						get_template_part( 'templates/page--service' );
@@ -70,14 +74,14 @@ if ( is_archive() || is_single() || is_home() ) {
 
 					} else {
 						if ( is_category( 'backnumber' ) ) {
-							echo '<p class="text-center"><img src="', get_template_directory_uri(), '/assets/img/merumaga.png" alt="年3回発行していた「KAIRO for Business」がメルマガになりました。毎月第2水曜配信。企業法務に関する情報が紙面版より早く届きます。"></p><p><a href="#form" class="button">購読はコチラから</a></p>';
+							echo '<p class="text-center"><img src="', get_template_directory_uri(), '/assets/img/merumaga.png" alt="年3回発行していた「KAIRO for Business」がメルマガになりました。毎月第2水曜配信。企業法務に関する情報が紙面版より早く届きます。"></p><p><a href="#form" class="button">登録はコチラから</a></p>';
 						}
 						while ( have_posts() ) : the_post();
 							get_template_part( './templates/content' );
 						endwhile;
 
 						if ( is_category( 'backnumber' ) || in_category( 'backnumber' ) ) {
-							echo '<h2 id="form">メールマガジン購読</h2>';
+							echo '<h2 id="form">メールマガジン登録</h2>';
 
 							if ( in_category( 'backnumber' ) ) {
 								echo '<p class="text-center"><img src="', get_template_directory_uri(), '/assets/img/merumaga.png" alt="年3回発行していた「KAIRO for Business」がメルマガになりました。毎月第2水曜配信。企業法務に関する情報が紙面版より早く届きます。"></p>';
@@ -91,9 +95,11 @@ if ( is_archive() || is_single() || is_home() ) {
 					echo '<h2 class="text-center">記事がありません。</h2>';
 				}
 			?>
+			</div>
+			<div class="column small-12">
+				<?php NID_Pagination::pagination(); ?>
+			</div>
 		</div>
-		<div class="column small-12"><?php NID_Pagination::pagination(); ?></div>
-	</div>
-</main>
-<?php
+	</main>
+	<?php
 	get_footer();
