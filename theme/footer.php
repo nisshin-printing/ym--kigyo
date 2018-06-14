@@ -23,15 +23,9 @@
 			<p class="footer--title"><?php NID_SVG::icon( 'site-map', array( 'class' => 'footer--title-icon' ) ); ?>サイトマップ</p>
 			<div class="row">
 				<?php
-					NID_Menu::nav_menu( 'ringo-scopenav', array(
+					NID_Menu::nav_menu( 'footer', array(
 						'container' => false,
-						'items_wrap' => '<ul class="menu vertical footer--nav column large-6">%3$s</ul>'
-					) );
-
-					NID_Menu::nav_menu( 'ringo-footernav', array(
-						'container' => false,
-						'items_wrap' => '<ul class="menu vertical footer--nav column large-6 show-for-large">%3$s</ul>',
-						'show_level_class' => true
+						'items_wrap' => '<ul class="menu vertical footer--nav">%3$s</ul>'
 					) );
 				?>
 			</div>

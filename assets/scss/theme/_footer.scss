@@ -5,3 +5,9 @@
 .footer--copy {
 		background-color: $primary-color;
 }
+
+.footer--nav {
+		.menu.nested li {
+				display: inline-block;
+		}
+}
