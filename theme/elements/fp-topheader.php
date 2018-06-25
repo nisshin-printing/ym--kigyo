@@ -59,9 +59,9 @@
 						</rp>
 					</ruby>。</h1>
 				<div class="copy--desc">
-					<p>相談件数12,000件以上
+					<p>相談件数17,000件以上
 						<small>※　</small>選ぶなら広島最大級。</p>
-					<small>※　平成27年12月時点</small>
+					<small>※　平成29年12月時点（事務所総数）</small>
 				</div>
 				<p class="topheader--button">
 					<a href="tel:0120783409" title="電話する" class="button hollow expanded">
