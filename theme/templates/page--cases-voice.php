@@ -22,4 +22,8 @@
 	if ( 20 <= $headerArray['X-WP-Total'] ) {
 		echo '<p class="text-center"><a href="https://www.law-yamashita.com/', $is_type, '" class="button large" target="_blank">もっと見る<br><span style="font-size:0.8em">※メインサイトへ移行します。</span></a></p>';
 	}
+
+	if ( 'voice' === $is_type ) {
+		echo '<p class="text-center"><a href="https://hiroshima-kigyo.com/category/interview" class="button large">顧問先インタビューはこちら</a></p>';
+	}
 ?>
