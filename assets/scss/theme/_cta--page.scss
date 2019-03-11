@@ -1,0 +1,31 @@
+.cta--page {
+		background: #76b852;
+		background: linear-gradient(to right, #8DC26F, #76b852);
+		padding: 2rem 1rem;
+		text-align: center;
+		&__title {
+				font-size: 1.5rem;
+		}
+}
+
+.cta--page__komon {
+		background: #141e30;
+		background: linear-gradient(to right, #141e30, #243b55);
+		color: #FFF;
+		.--title img {
+				margin-right: .5rem;
+		}
+}
+
+.page--caution {
+		padding: .5rem;
+		background-color: #ccc;
+		border-radius: 2px;
+		&__title {
+				font-size: 2rem;
+				img {
+						display: inline-block;
+						margin-right: .5rem;
+				}
+		}
+}

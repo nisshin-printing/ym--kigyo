@@ -3,6 +3,7 @@
 	$json = file_get_contents( $url );
 	$arr_json = json_decode( $json, true );
 
+
 	foreach ( $arr_json as $json ) :
 		$date = $json['date'];
 		$title = $json['title']['rendered'];
@@ -24,6 +25,6 @@
 	}
 
 	if ( 'voice' === $is_type ) {
-		echo '<p class="text-center"><a href="https://hiroshima-kigyo.com/category/interview" class="button large">顧問先インタビューはこちら</a></p>';
+		echo '<p class="text-center"><a href="https://hiroshima-kigyo.com/category/interview"><img src="', get_template_directory_uri(), '/assets/img/cta--interview.jpg" alt="顧問先インタビューはこちら"></a></p>';
 	}
 ?>

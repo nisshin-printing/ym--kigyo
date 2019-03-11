@@ -20,7 +20,7 @@
 			<p class="cta--lp__desc">社外社内を問わず、あらゆるところに法律問題が潜んでいます。予期せぬ法律トラブルが発生してしまうと、その解決のために多大な時間、費用や労力がかかってしまいます。</p>
 		</div>
 		<div class="column small-12 large-2 text-center">
-			<a href="#contact" class="button large waves-effect">お問い合わせ</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large waves-effect">Web予約フォーム</a>
 		</div>
 	</div>
 </div>
@@ -40,7 +40,7 @@
 			<a href="#section-4" title="ご利用料金の比較">料金</a>
 		</li>
 		<li>
-			<a href="#contact" title="お問い合わせ">お問い合わせ</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" title="Web予約フォーム">Web予約フォーム</a>
 		</li>
 	</ul>
 </nav>
@@ -74,27 +74,27 @@
 
 		<div class="column small-12 medium-6 komon--box">
 			<div class="komon--box__inner">
-				<h3>3.法律トラブルの防止（予防法務）</h3>
-				<p>
-					<u>法律トラブルがいったん発生してしまうと、その解決に多くの時間、費用や労力がかかってしまいます。</u>
-				</p>
-				<p>顧問弁護士契約を締結し、弁護士にこまめに相談することによって
-					<strong class="underline">法律トラブルの発生・拡大を未然に防ぐ</strong>ことができ、これらのコスト負担を免れたり、低く抑えることができます。</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="row collapse">
-		<div class="column small-12 medium-6 komon--box">
-			<div class="komon--box__inner">
-				<h3>4.法務コストの削減</h3>
+				<h3>3.法務コストの削減</h3>
 				<p>企業様にて優秀な法務担当者を採用し、社内だけで法律トラブルに対応していくのは
 					<u>大きな負担</u>です。</p>
 				<p>顧問弁護士契約を締結し、
 					<strong class="underline">法務部門を弁護士にアウトソーシングすることにより法務コストを大幅に削減</strong>することができます。</p>
 			</div>
 		</div>
+	</div>
 
+	<div class="row align-middle komon--box komon--box__inner">
+		<div class="column small-12 medium-6 large-4">
+			<img class="thumbnail" src="<?php echo get_template_directory_uri(), '/assets/img/lp/cta--komon.jpg'; ?>" alt="法律トラブルの防止（予防法務）">
+		</div>
+		<div class="column small-12 medium-6 large-8">
+			<h3>4.法律トラブルの防止（予防法務）</h3>
+			<p><u>法律トラブルがいったん発生してしまうと、その解決に多くの時間、費用や労力がかかってしまいます。</u></p>
+			<p>顧問弁護士契約を締結し、弁護士にこまめに相談することによって<strong class="underline">法律トラブルの発生・拡大を未然に防ぐ</strong>ことができ、これらのコスト負担を免れたり、低く抑えることができます。</p>
+		</div>
+	</div>
+
+	<div class="row collapse">
 		<div class="column small-12 medium-6 komon--box">
 			<div class="komon--box__inner">
 				<h3>5.信頼の向上</h3>
@@ -104,21 +104,10 @@
 					<strong class="underline">法律トラブルの発生を抑制・牽制する効果</strong>があります。</p>
 			</div>
 		</div>
-	</div>
-
-	<div class="row collapse">
-		<div class="column small-12 medium-6 komon--box">
-			<div class="komon--box__inner">
-				<h3>6.福利厚生に利用可能</h3>
-				<p>会社自体の法律トラブルはもちろん、
-					<strong class="underline">代表者・役員・従業員の案件にも対応</strong>します。新たな
-					<u>福利厚生の一つ</u>としてご利用いただけます。</p>
-			</div>
-		</div>
 
 		<div class="column small-12 medium-6 komon--box">
 			<div class="komon--box__inner">
-				<h3>7.大規模事務所の利点</h3>
+				<h3>6.大規模事務所の利点</h3>
 				<p>中四国最大級という大規模事務所として蓄積してきた多数の解決実績を所内で共有することで、適切な解決を複数の弁護士による検討の上、ご提案することができます。</p>
 				<p>また、代表弁護士の山下江をはじめとする事務所員は、広島商工会議所・広島県中小企業家同友会・広島日経懇話会（日経新聞）・ロータリークラブ・NPO法人広島経済活性化倶楽部（KKC）などを通して
 					<strong class="underline">多くの企業家と交流し企業家に特有な経営や法律トラブルに関わる悩みに対する理解を深めています。</strong>
@@ -132,7 +121,7 @@
 			<img class="thumbnail" src="<?php echo get_template_directory_uri(), '/assets/img/lp/seminar.jpg'; ?>" alt="企業法務セミナーを定期的に開催！">
 		</div>
 		<div class="column small-12 medium-6 large-8">
-			<h3>8.企業法務セミナーと懇親会</h3>
+			<h3>7.企業法務セミナーと懇親会</h3>
 			<p>山下江法律事務所では、顧問会社さまが無料でご参加いただける企業法務セミナーを定期開催しています。セミナーでは
 				<strong class="underline">旬の法律問題の解説をしており、それまで対策できていなかった法律問題の発見に繋がります。</strong>
 			</p>
@@ -154,7 +143,7 @@
 			<img src="<?php echo get_template_directory_uri(),  '/assets/img/lp/mitsumori-free.png'; ?>" alt="顧問弁護士契約のメリットや対応範囲など無料でご説明します。">
 		</div>
 		<div class="column small-12 text-center">
-			<a href="#contact" class="button large wave-effects">今すぐ相談する</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large wave-effects">Web予約フォーム</a>
 		</div>
 	</div>
 </section>
@@ -237,7 +226,7 @@
 			<img src="<?php echo get_template_directory_uri(),  '/assets/img/lp/mitsumori-free.png'; ?>" alt="顧問弁護士契約のメリットや対応範囲など無料でご説明します。">
 		</div>
 		<div class="column small-12 text-center">
-			<a href="#contact" class="button large wave-effects">今すぐ相談する</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large wave-effects">Web予約フォーム</a>
 		</div>
 	</div>
 </section>
@@ -249,7 +238,6 @@
 			$args = array(
 				'posts_per_page' => '3',
 				'category_name' => 'interview',
-				'order' => 'ASC'
 			);
 			$posts = new WP_Query( $args );
 			while ( $posts->have_posts() ) : $posts->the_post();
@@ -277,6 +265,7 @@ EOT;
 		endwhile;
 		?>
 	</div>
+	<p class="text-center"><a href="https://hiroshima-kigyo.com/category/interview" class="button secondary">顧問先インタビューをもっと見る</a></p>
 </section>
 
 <section class="cta--lp --komon">
@@ -289,7 +278,7 @@ EOT;
 			<img src="<?php echo get_template_directory_uri(),  '/assets/img/lp/mitsumori-free.png'; ?>" alt="顧問弁護士契約のメリットや対応範囲など無料でご説明します。">
 		</div>
 		<div class="column small-12 text-center">
-			<a href="#contact" class="button large wave-effects">今すぐ相談する</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large wave-effects">Web予約フォーム</a>
 		</div>
 	</div>
 </section>
@@ -376,9 +365,6 @@ EOT;
 							<li>早い段階に
 								<strong>的確なアドバイスを得られる</strong>
 							</li>
-							<li>
-								<strong>福利厚生の一つとして利用可能</strong>
-							</li>
 						</ul>
 					</td>
 				</tr>
@@ -397,7 +383,7 @@ EOT;
 			<img src="<?php echo get_template_directory_uri(),  '/assets/img/lp/mitsumori-free.png'; ?>" alt="顧問弁護士契約のメリットや対応範囲など無料でご説明します。">
 		</div>
 		<div class="column small-12 text-center">
-			<a href="#contact" class="button large wave-effects">今すぐ相談する</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large wave-effects">Web予約フォーム</a>
 		</div>
 	</div>
 </section>
@@ -424,18 +410,9 @@ EOT;
 	<hr style="height:1px;margin-top:3rem">
 	<div class="row">
 		<div class="column">
-			<h3>お電話で予約する</h3>
+			<h3>Web予約する</h3>
 			<p class="text-center">
-				<a title="ご予約専用ダイヤル" href="tel:0120783409">
-					<img class="alignnone size-full wp-image-1131" src="//www.law-yamashita.com/wp-content/uploads/2015/07/header-tel.jpg" alt="法律相談ご予約専用ダイヤル"
-					    width="344" height="44" />
-				</a>
-			</p>
-		</div>
-		<div class="column">
-			<h3>メールで予約する</h3>
-			<p class="text-center">
-				<a href="https://www.law-yamashita.com/contact" class="button large">お問い合わせフォーム</a>
+				<a href="https://www.law-yamashita.com/reserve" target="_blank">Web予約フォーム</a>
 			</p>
 		</div>
 	</div>
@@ -449,18 +426,9 @@ EOT;
 	</p>
 	<div class="row">
 		<div class="column">
-			<h3>お電話で予約する</h3>
+			<h3>Web予約する</h3>
 			<p class="text-center">
-				<a title="ご予約専用ダイヤル" href="tel:0120783409">
-					<img class="alignnone size-full wp-image-1131" src="//www.law-yamashita.com/wp-content/uploads/2015/07/header-tel.jpg" alt="法律相談ご予約専用ダイヤル"
-					    width="344" height="44" />
-				</a>
-			</p>
-		</div>
-		<div class="column">
-			<h3>メールで予約する</h3>
-			<p class="text-center">
-				<a href="https://www.law-yamashita.com/contact" class="button large">お問い合わせフォーム</a>
+				<a href="https://www.law-yamashita.com/reserve" target="_blank" class="button large">Web予約フォーム</a>
 			</p>
 		</div>
 	</div>
@@ -481,7 +449,7 @@ EOT;
 			<a href="#section-4" title="ご利用料金の比較">料金</a>
 		</li>
 		<li>
-			<a href="#contact" title="お問い合わせ">お問い合わせ</a>
+			<a href="https://www.law-yamashita.com/reserve" target="_blank" title="お問い合わせ">お問い合わせ</a>
 		</li>
 	</ul>
 </nav>
