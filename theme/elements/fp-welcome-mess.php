@@ -24,20 +24,17 @@
 		<div class="row align-middle">
 			<div class="column small-12 medium-6 large-4 message--image">
 				<picture>
-					<source media="(max-width: 639px)" srcset="https://i1.wp.com/www.law-yamashita.com/wp-content/uploads/2015/11/kasahara-1.jpg?w=210&ssl=1" sizes="210px">
-					<img class="thumbnail" src="https://www.law-yamashita.com/wp-content/uploads/2018/01/50565c917104fece70613feb2ca6b380-e1515485937107.jpg" width="250" height="375" alt="副代表・広島本部長・弁護士の田中伸">
+					<source media="(max-width: 639px)" srcset="https://www.law-yamashita.com/wp-content/uploads/2015/06/shin-tanaka.png" sizes="210px">
+					<img class="thumbnail" src="//i0.wp.com/www.law-yamashita.com/wp-content/uploads/2016/11/sub-topmessage.jpg?w=250" width="250" height="375" alt="副代表・広島本部長・弁護士の田中伸">
 				</picture>
 			</div>
 			<div class="column small-12 medium-6 large-8">
 				<h2 class="title--border-bottom">チームリーダーあいさつ</h2>
 				<div class="message--paragraph">
-					<p>山下江法律事務所には「企業チーム」があります。</p>
-					<p>企業の皆様、「弁護士に相談するとできないことばかり増える・・・。」と思っていませんか？確かに、そうかもしれません。可能な限り、企業の皆様のご要望を実現可能な方法を考えますが、それでも、できないことを増やしてしまうことはあります。</p>
-					<p>しかし、弁護士に相談せず法的問題に気付かないまま企業活動を進めてしまえば、どうなるでしょうか？法的問題に気付いたときには手遅れで、莫大な損害を避けられないかもしれません。</p>
-					<p>「これまで法的問題は起こっていないから大丈夫♪」と思っていませんか？昨日まで大丈夫だったとしても、今日どうなるかは分かりません。</p>
-					<p>「でも、日程調整して法律事務所に行って弁護士に相談するのは時間がかかる・・・。」と思っていませんか？顧問契約を結べば、ちょっとしたことでも電話やメールで弁護士に相談可能です。</p>
-					<p>山下江法律事務所では、弁護士４名、秘書５名で企業チームを構成し、スキルアップに励み、予防法務、債権回収、労働問題等、幅広く企業法務に取り組んでいます。是非、ご相談下さい。</p>
-					<p class="text-right"><a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/553" data-toggle="js--ajax-modal">笠原輔について　></a></p>
+					<p>山下江法律事務所には「企業チーム」があります。<br>メンバーは、企業法務案件を比較的多く扱っている弁護士５名、秘書５名です。</p>
+					<p>企業法務の分野において、法律の専門家として質の高い法的サービスを提供できるよう、一層の研鑽に励んでまいりますので、今後ともよろしくお願いいたします。</p>
+					<p>企業の経営者の皆様は、法的トラブルの予防の観点から、是非、弁護士との「顧問契約」をご検討ください</p>
+					<p class="text-right"><a href="https://hiroshima-kigyo.com/service/komon" class="button secondary">顧問契約とは</a> <a class="js--modal-button button" data-ajax-modal="https://www.law-yamashita.com/wp-json/wp/v2/members/549" data-toggle="js--ajax-modal">田中伸について　></a></p>
 				</div>
 			</div>
 		</div>
